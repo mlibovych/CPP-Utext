@@ -1,16 +1,9 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
 #include <QtWidgets>
-
-#include <QMainWindow>
-#include <QFileSystemModel>
-#include <QLineEdit>
-#include <QListView>
-#include <QTableView>
-#include <QMenu>
-#include <QMessageBox>
 
 namespace Ui {
     class MainWindow;
@@ -27,7 +20,6 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
 };
 
 class MyWidget : public QWidget
@@ -44,7 +36,9 @@ public slots:
 protected:
     void paintEvent(QPaintEvent *event) override;
 
-    void keyPressEvent(QKeyEvent *event) override;
+    // void keyPressEvent(QKeyEvent *event) override;
+
+    bool eventFilter(QObject* o, QEvent* e) override;
 
 private:
     QString text;

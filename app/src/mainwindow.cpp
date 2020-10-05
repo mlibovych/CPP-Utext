@@ -27,8 +27,8 @@ MyWidget::MyWidget(QWidget *parent)
     newFont.setPointSize(newFont.pointSize() + 20);
     setFont(newFont);
 
-    // connect(this, SIGNAL(key(QString)), this, SLOT(setText(QString)));
-    setFocusPolicy(Qt::StrongFocus);
+    setFocusPolicy(Qt::ClickFocus);
+    installEventFilter(this);
 }
 
 void MyWidget::paintEvent(QPaintEvent *)
@@ -42,16 +42,39 @@ void MyWidget::paintEvent(QPaintEvent *)
         painter.drawText(x, y,
                          QString(text[i]));
         x += metrics.horizontalAdvance(text[i]);
-        if (x >= width()) {
+        if (text[i] == '\n') {
             x = 0;
             y += (metrics.ascent() - metrics.descent());
         }
     }
 }
 
-void MyWidget::keyPressEvent(QKeyEvent *event)
-{
-    QString text = event->text();
-    setText(text);
-    // emit key(text);
+// void MyWidget::keyPressEvent(QKeyEvent *event)
+// {
+//     int key = event->key();
+//     QString text = event->text();
+
+//     if (key == Qt::Key_Return) {
+//         text = "\n";
+//     }
+//     setText(text);
+// }
+
+bool MyWidget::eventFilter(QObject* o, QEvent* e) {
+	if (e->type() == QEvent::KeyPress) {
+		QKeyEvent* k = static_cast<QKeyEvent*>(e);
+        int key = k->key();
+        QString text = k->text();
+
+		if (key == Qt::Key_Tab) {
+			setText("    ");
+            return true;
+		}
+        else if (key == Qt::Key_Return) {
+            text = "\n";
+        }
+        setText(text);
+        return false;
+	}
+	return false;
 }
