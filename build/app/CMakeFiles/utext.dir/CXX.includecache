@@ -37,6 +37,8 @@ QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
 -
+QtWidgets/QPlainTextEdit
+-
 QtWidgets/QSpacerItem
 -
 QtWidgets/QTreeView

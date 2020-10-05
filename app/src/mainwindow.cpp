@@ -7,9 +7,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    MyWidget *myWidget = new MyWidget;
+    // MyWidget *myWidget = new MyWidget;
 
-    ui->horizontalLayout_4->addWidget(myWidget);
+    // ui->horizontalLayout_4->addWidget(myWidget);
 }
 
 MainWindow::~MainWindow()
@@ -48,17 +48,6 @@ void MyWidget::paintEvent(QPaintEvent *)
         }
     }
 }
-
-// void MyWidget::keyPressEvent(QKeyEvent *event)
-// {
-//     int key = event->key();
-//     QString text = event->text();
-
-//     if (key == Qt::Key_Return) {
-//         text = "\n";
-//     }
-//     setText(text);
-// }
 
 bool MyWidget::eventFilter(QObject* o, QEvent* e) {
 	if (e->type() == QEvent::KeyPress) {
