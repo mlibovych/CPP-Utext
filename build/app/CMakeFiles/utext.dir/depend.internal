@@ -13,9 +13,16 @@ app/CMakeFiles/utext.dir/src/mainwindow.cpp.o
  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
  /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.cpp
  /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h
+ /Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
  app/utext_autogen/Forms/ui_mainwindow.h
+app/CMakeFiles/utext.dir/src/textArea.cpp.o
+ /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
+ /Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.cpp
+ /Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o
  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
  /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h
+ /Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
  /Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_mainwindow.cpp
+ /Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_textArea.cpp
  /Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp

@@ -12,8 +12,8 @@ find_library(TAGLIB taglib)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-set(SOURCES main.cpp src/mainwindow.cpp)
-set(HEADERS src/mainwindow.h)
+set(SOURCES main.cpp src/mainwindow.cpp src/textArea.cpp)
+set(HEADERS src/mainwindow.h src/textArea.h)
 set(UI Forms/mainwindow.ui)
 
 qt5_add_resources(SOURCES resources/resources.qrc)

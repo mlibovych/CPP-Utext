@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/mlibovych/Desktop/CPP-Utext/app/main.cpp" "/Users/mlibovych/Desktop/CPP-Utext/build/app/CMakeFiles/utext.dir/main.cpp.o"
   "/Users/mlibovych/Desktop/CPP-Utext/build/app/qrc_resources.cpp" "/Users/mlibovych/Desktop/CPP-Utext/build/app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
   "/Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.cpp" "/Users/mlibovych/Desktop/CPP-Utext/build/app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
+  "/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.cpp" "/Users/mlibovych/Desktop/CPP-Utext/build/app/CMakeFiles/utext.dir/src/textArea.cpp.o"
   "/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp" "/Users/mlibovych/Desktop/CPP-Utext/build/app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

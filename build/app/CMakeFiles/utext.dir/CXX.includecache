@@ -13,8 +13,22 @@ mainwindow.h
 /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h
 ../Forms/ui_mainwindow.h
 /Users/mlibovych/Desktop/CPP-Utext/app/Forms/ui_mainwindow.h
+textArea.h
+/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
 
 /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h
+string
+-
+iostream
+-
+QtWidgets
+-
+
+/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.cpp
+textArea.h
+/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
+
+/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
 string
 -
 iostream
@@ -36,8 +50,6 @@ QtWidgets/QLabel
 QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
--
-QtWidgets/QPlainTextEdit
 -
 QtWidgets/QSpacerItem
 -

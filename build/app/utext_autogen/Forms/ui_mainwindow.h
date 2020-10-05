@@ -16,7 +16,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTreeView>
 #include <QtWidgets/QVBoxLayout>
@@ -37,7 +36,6 @@ public:
     QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_4;
     QTreeView *treeView;
-    QPlainTextEdit *plainTextEdit;
     QMenuBar *menubar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -108,11 +106,6 @@ public:
         treeView->setMaximumSize(QSize(160, 16777215));
 
         horizontalLayout_4->addWidget(treeView);
-
-        plainTextEdit = new QPlainTextEdit(centralwidget);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-
-        horizontalLayout_4->addWidget(plainTextEdit);
 
 
         verticalLayout_3->addLayout(horizontalLayout_4);

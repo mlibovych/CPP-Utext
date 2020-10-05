@@ -12,10 +12,17 @@ app/CMakeFiles/utext.dir/qrc_resources.cpp.o: app/qrc_resources.cpp
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: ../app/src/mainwindow.cpp
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: ../app/src/mainwindow.h
+app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: ../app/src/textArea.h
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: app/utext_autogen/Forms/ui_mainwindow.h
+
+app/CMakeFiles/utext.dir/src/textArea.cpp.o: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
+app/CMakeFiles/utext.dir/src/textArea.cpp.o: ../app/src/textArea.cpp
+app/CMakeFiles/utext.dir/src/textArea.cpp.o: ../app/src/textArea.h
 
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: ../app/src/mainwindow.h
+app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: ../app/src/textArea.h
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: app/utext_autogen/UVLADIE3JM/moc_mainwindow.cpp
+app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: app/utext_autogen/UVLADIE3JM/moc_textArea.cpp
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: app/utext_autogen/mocs_compilation.cpp
 

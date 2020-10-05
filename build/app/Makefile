@@ -240,6 +240,33 @@ src/mainwindow.cpp.s:
 	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/textArea.o: src/textArea.cpp.o
+
+.PHONY : src/textArea.o
+
+# target to build an object file
+src/textArea.cpp.o:
+	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.o
+.PHONY : src/textArea.cpp.o
+
+src/textArea.i: src/textArea.cpp.i
+
+.PHONY : src/textArea.i
+
+# target to preprocess a source file
+src/textArea.cpp.i:
+	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.i
+.PHONY : src/textArea.cpp.i
+
+src/textArea.s: src/textArea.cpp.s
+
+.PHONY : src/textArea.s
+
+# target to generate assembly for a file
+src/textArea.cpp.s:
+	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.s
+.PHONY : src/textArea.cpp.s
+
 utext_autogen/mocs_compilation.o: utext_autogen/mocs_compilation.cpp.o
 
 .PHONY : utext_autogen/mocs_compilation.o
@@ -286,6 +313,9 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/textArea.o"
+	@echo "... src/textArea.i"
+	@echo "... src/textArea.s"
 	@echo "... utext_autogen/mocs_compilation.o"
 	@echo "... utext_autogen/mocs_compilation.i"
 	@echo "... utext_autogen/mocs_compilation.s"

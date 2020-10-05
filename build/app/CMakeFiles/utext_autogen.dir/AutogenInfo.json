@@ -56,6 +56,11 @@
 			"/Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h",
 			"MU",
 			"UVLADIE3JM/moc_mainwindow.cpp"
+		],
+		[
+			"/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h",
+			"MU",
+			"UVLADIE3JM/moc_textArea.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -112,7 +117,8 @@
 	"SOURCES" : 
 	[
 		[ "/Users/mlibovych/Desktop/CPP-Utext/app/main.cpp", "MU" ],
-		[ "/Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.cpp", "MU" ]
+		[ "/Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.cpp", "MU" ],
+		[ "/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
