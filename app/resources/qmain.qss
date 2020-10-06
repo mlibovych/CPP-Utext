@@ -49,3 +49,7 @@ QScrollBar {
 QTableView::item:selected {
 	background-color: DarkOrange;
 }
+
+MyCursor {
+ 	background-color: DarkOrange;
+}

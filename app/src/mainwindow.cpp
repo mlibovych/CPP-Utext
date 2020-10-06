@@ -7,10 +7,9 @@ MainWindow::MainWindow(QWidget *parent) :
                         QMainWindow(parent),
                         ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
-
     MyWidget *text = new MyWidget;
 
+    ui->setupUi(this);
     ui->horizontalLayout_4->addWidget(text);
 }
 
@@ -22,15 +21,22 @@ MainWindow::~MainWindow()
 MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent)
 {
+    MyCursor *cursor = new MyCursor(this);
+    QFont newFont = font();
+
     setBackgroundRole(QPalette::Midlight);
     setAutoFillBackground(true);
-
-    QFont newFont = font();
+    setFocusPolicy(Qt::ClickFocus);
+    installEventFilter(this);
     newFont.setPointSize(newFont.pointSize() + 20);
     setFont(newFont);
 
-    setFocusPolicy(Qt::ClickFocus);
-    installEventFilter(this);
+    cursor->setFixedHeight(30);
+    cursor->setFixedWidth(2);
+    cursor->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+
+    // cursor->move(0, 0);
+
 }
 
 void MyWidget::paintEvent(QPaintEvent *)
@@ -58,14 +64,28 @@ void MyWidget::paintEvent(QPaintEvent *)
             y += (metrics.ascent() - metrics.descent());
         }
     }
-    painter.drawLine(curPosX, curPosY, curPosX, curPosY - (metrics.ascent() - metrics.descent()));
+    if (hasFocus() && draw) {
+        painter.drawLine(curPosX, curPosY,
+                         curPosX, curPosY - (metrics.ascent() - metrics.descent()));
+    }
+}
+
+void MyWidget::timerEvent(QTimerEvent *event)
+{
+    if (event->timerId() == timer.timerId()) {
+        draw ? draw = 0 : draw = 1;
+        update();
+    } else {
+        QWidget::timerEvent(event);
+    }
 }
 
 bool MyWidget::eventFilter(QObject* o, QEvent* e) {
 	if (e->type() == QEvent::KeyPress) {
 		QKeyEvent* k = static_cast<QKeyEvent*>(e);
         int key = k->key();
-        QString text = k->text();
+        QString newText = k->text();
+
 		if (key == Qt::Key_Tab) {
             setText("\t", curPos);
             return true;
@@ -93,9 +113,44 @@ bool MyWidget::eventFilter(QObject* o, QEvent* e) {
             return true;
         }
         else {
-            setText(text, curPos);
+            setText(newText, curPos);
             return false;
         }
 	}
 	return false;
 }
+
+void MyWidget::setText(const QString newText) {
+    text += newText; update();
+}
+
+void MyWidget::setText(const QString newText, int pos) {
+    text.insert(pos, newText);
+    if (!newText.isEmpty()) {
+        ++curPos;
+    }
+    update();
+}
+
+void MyWidget::backspace() {
+    if (curPos > 0) {
+        text.remove(--curPos, 1);
+        update();
+    }
+}
+
+MyCursor::MyCursor(QWidget *parent)
+                : QWidget(parent)
+{
+    setBackgroundRole(QPalette::Midlight);
+    setAutoFillBackground(true);
+    // timer.start(400, this);
+};
+
+void MyCursor::paintEvent(QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+ }

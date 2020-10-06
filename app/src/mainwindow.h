@@ -34,31 +34,33 @@ public:
     }
 
 public slots:
-    void setText(const QString newText) {
-        text += newText; update();
-    }
+    void setText(const QString newText);
 
-    void setText(const QString newText, int pos) {
-        text.insert(pos, newText);
-        if (!newText.isEmpty()) {
-            ++curPos;
-        }
-        update();
-    }
+    void setText(const QString newText, int pos);
 
-    void backspace() {
-        if (curPos > 0) {
-            text.remove(--curPos, 1);
-            update();
-        }
-    }
+    void backspace();
 
 protected:
     void paintEvent(QPaintEvent *event) override;
-
+    void timerEvent(QTimerEvent *event) override;
     bool eventFilter(QObject* o, QEvent* e) override;
 
 private:
+    QBasicTimer timer;
     QString text;
     int curPos = 0;
+    bool draw = 1;
+};
+
+class MyCursor : public QWidget
+{
+    Q_OBJECT
+
+public:
+    MyCursor(QWidget *parent = nullptr);
+
+    void paintEvent(QPaintEvent *) override;
+
+private:
+    // QBasicTimer timer;
 };
