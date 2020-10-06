@@ -92,8 +92,8 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     return _id;
 }
 struct qt_meta_stringdata_MyWidget_t {
-    QByteArrayData data[5];
-    char stringdata0[30];
+    QByteArrayData data[6];
+    char stringdata0[40];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -106,10 +106,11 @@ QT_MOC_LITERAL(0, 0, 8), // "MyWidget"
 QT_MOC_LITERAL(1, 9, 7), // "setText"
 QT_MOC_LITERAL(2, 17, 0), // ""
 QT_MOC_LITERAL(3, 18, 7), // "newText"
-QT_MOC_LITERAL(4, 26, 3) // "pos"
+QT_MOC_LITERAL(4, 26, 3), // "pos"
+QT_MOC_LITERAL(5, 30, 9) // "backspace"
 
     },
-    "MyWidget\0setText\0\0newText\0pos"
+    "MyWidget\0setText\0\0newText\0pos\0backspace"
 };
 #undef QT_MOC_LITERAL
 
@@ -119,7 +120,7 @@ static const uint qt_meta_data_MyWidget[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -127,12 +128,14 @@ static const uint qt_meta_data_MyWidget[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x0a /* Public */,
-       1,    2,   27,    2, 0x0a /* Public */,
+       1,    1,   29,    2, 0x0a /* Public */,
+       1,    2,   32,    2, 0x0a /* Public */,
+       5,    0,   37,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void, QMetaType::QString, QMetaType::Int,    3,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -145,6 +148,7 @@ void MyWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->setText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 1: _t->setText((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 2: _t->backspace(); break;
         default: ;
         }
     }
@@ -179,13 +183,13 @@ int MyWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

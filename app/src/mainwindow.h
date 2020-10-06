@@ -46,6 +46,13 @@ public slots:
         update();
     }
 
+    void backspace() {
+        if (curPos > 0) {
+            text.remove(--curPos, 1);
+            update();
+        }
+    }
+
 protected:
     void paintEvent(QPaintEvent *event) override;
 

@@ -66,13 +66,17 @@ bool MyWidget::eventFilter(QObject* o, QEvent* e) {
 		QKeyEvent* k = static_cast<QKeyEvent*>(e);
         int key = k->key();
         QString text = k->text();
-
 		if (key == Qt::Key_Tab) {
-			setText("    ");
+            setText("\t", curPos);
             return true;
 		}
         else if (key == Qt::Key_Return) {
-            text = "\n";
+            setText("\n", curPos);
+            return true;
+        }
+        else if (key == Qt::Key_Backspace) {
+            backspace();
+            return true;
         }
         else if (key == Qt::Key_Left || key == Qt::Key_Right) {
             if (key == Qt::Key_Left) {
@@ -88,8 +92,10 @@ bool MyWidget::eventFilter(QObject* o, QEvent* e) {
             update();
             return true;
         }
-        setText(text, curPos);
-        return false;
+        else {
+            setText(text, curPos);
+            return false;
+        }
 	}
 	return false;
 }
