@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "textArea.h"
 
 TextArea::TextArea(QWidget *parent) :
@@ -7,8 +9,4 @@ TextArea::TextArea(QWidget *parent) :
 
 TextArea::~TextArea()
 {
-}
-
-QString TextArea::toPlainText() const {
-    return "aaaa";
 }

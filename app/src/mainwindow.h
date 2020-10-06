@@ -22,22 +22,28 @@ public:
 
 };
 
-// class MyWidget : public QWidget
-// {
-//     Q_OBJECT
+class MyWidget : public QWidget
+{
+    Q_OBJECT
 
-// public:
-//     MyWidget(QWidget *parent = nullptr);
+public:
+    MyWidget(QWidget *parent = nullptr);
 
-// public slots:
-//     void setText(/*const QString &newText*/) { text += "123"; update(); }
-//     void setText(const QString newText) { text += newText; update(); }
+    int getSize() {
+        return text.size();
+    }
 
-// protected:
-//     void paintEvent(QPaintEvent *event) override;
+public slots:
+    void setText(const QString newText) { text += newText; update(); }
 
-//     bool eventFilter(QObject* o, QEvent* e) override;
+    void setText(const QString newText, int pos) { text.insert(pos, newText); update();}
 
-// private:
-//     QString text;
-// };
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
+    bool eventFilter(QObject* o, QEvent* e) override;
+
+private:
+    QString text;
+    int curPos = 0;
+};

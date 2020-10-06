@@ -2,6 +2,8 @@
   /Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h \
@@ -102,9 +104,12 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base_03 \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
@@ -134,13 +139,18 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdio.h \
@@ -154,6 +164,86 @@
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include/stdarg.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qalgorithms.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qarraydata.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qatomic.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qbasicatomic.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qbytearray.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qbytearraylist.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qchar.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qcompilerdetection.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qconfig.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qcontainerfwd.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qcontainertools_impl.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qdatastream.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qflags.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qglobal.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qglobalstatic.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qhash.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qhashfunctions.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qiodevice.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qiterator.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qline.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qlist.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qlogging.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qmap.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qmargins.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qmetatype.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qmutex.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qnamespace.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qnumeric.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qobject.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qobject_impl.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qobjectdefs.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qobjectdefs_impl.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qpair.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qpoint.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qprocessordetection.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qrect.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qrefcount.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qregexp.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qscopedpointer.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qshareddata.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qsharedpointer.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qsharedpointer_impl.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qsize.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstring.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstringalgorithms.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstringlist.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstringliteral.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstringmatcher.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qstringview.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qsysinfo.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qsystemdetection.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qtcore-config.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qtypeinfo.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qvariant.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qvarlengtharray.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qvector.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qversiontagging.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QTextCursor \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qbrush.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qcolor.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qfont.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qimage.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qmatrix.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qpaintdevice.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qpen.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qpixelformat.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qpixmap.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qpolygon.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qregion.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qrgb.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qrgba64.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextcursor.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextformat.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextoption.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtgui-config.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtguiglobal.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtransform.h \
+  /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qwindowdefs.h \
   /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Versions/5/QtWidgets
