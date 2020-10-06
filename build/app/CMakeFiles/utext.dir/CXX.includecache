@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../app/src/mainwindow.h
+string
+-
+iostream
+-
+QtWidgets
+-
+
 /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Headers/QTextCursor
 qtextcursor.h
 /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Headers/qtextcursor.h
@@ -20,7 +28,39 @@ QtCore/qshareddata.h
 QtGui/qtextformat.h
 -
 
+/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Headers/QApplication
+qapplication.h
+/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Headers/qapplication.h
+
+/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Headers/qapplication.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qcoreapplication.h
+-
+QtGui/qwindowdefs.h
+-
+QtCore/qpoint.h
+-
+QtCore/qsize.h
+-
+QtGui/qcursor.h
+-
+QtWidgets/qdesktopwidget.h
+-
+QtGui/qguiapplication.h
+-
+
 /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
+
+/Users/mlibovych/Desktop/CPP-Utext/app/main.cpp
+iomanip
+-
+iostream
+-
+QApplication
+-
+mainwindow.h
+-
 
 /Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.cpp
 mainwindow.h
@@ -47,6 +87,32 @@ QtWidgets
 -
 QTextCursor
 -
+
+/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_mainwindow.cpp
+memory
+-
+../../../../app/src/mainwindow.h
+/Users/mlibovych/Desktop/CPP-Utext/app/src/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_textArea.cpp
+memory
+-
+../../../../app/src/textArea.h
+/Users/mlibovych/Desktop/CPP-Utext/app/src/textArea.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp
+UVLADIE3JM/moc_mainwindow.cpp
+/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_mainwindow.cpp
+UVLADIE3JM/moc_textArea.cpp
+/Users/mlibovych/Desktop/CPP-Utext/build/app/utext_autogen/UVLADIE3JM/moc_textArea.cpp
 
 app/utext_autogen/Forms/ui_mainwindow.h
 QtCore/QVariant

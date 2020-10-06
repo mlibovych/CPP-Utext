@@ -34,9 +34,17 @@ public:
     }
 
 public slots:
-    void setText(const QString newText) { text += newText; update(); }
+    void setText(const QString newText) {
+        text += newText; update();
+    }
 
-    void setText(const QString newText, int pos) { text.insert(pos, newText); update();}
+    void setText(const QString newText, int pos) {
+        text.insert(pos, newText);
+        if (!newText.isEmpty()) {
+            ++curPos;
+        }
+        update();
+    }
 
 protected:
     void paintEvent(QPaintEvent *event) override;

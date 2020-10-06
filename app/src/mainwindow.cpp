@@ -36,7 +36,8 @@ MyWidget::MyWidget(QWidget *parent)
 void MyWidget::paintEvent(QPaintEvent *)
 {
     QFontMetrics metrics(font());
-    int new_x = 0;
+    int curPosX = 0;
+    int curPosY = metrics.ascent() - metrics.descent();
     int x = 0;
     int y = metrics.ascent() - metrics.descent();
 
@@ -46,15 +47,18 @@ void MyWidget::paintEvent(QPaintEvent *)
                          QString(text[i]));
         x += metrics.horizontalAdvance(text[i]);
         if (i < curPos) {
-            new_x += metrics.horizontalAdvance(text[i]);
+            curPosX += metrics.horizontalAdvance(text[i]);
+            if (text[i] == '\n') {
+                curPosX = 0;
+                curPosY += (metrics.ascent() - metrics.descent());
+            }
         }
         if (text[i] == '\n') {
             x = 0;
             y += (metrics.ascent() - metrics.descent());
         }
     }
-    painter.drawLine(new_x, y,
-                                new_x, y - (metrics.ascent() - metrics.descent()));
+    painter.drawLine(curPosX, curPosY, curPosX, curPosY - (metrics.ascent() - metrics.descent()));
 }
 
 bool MyWidget::eventFilter(QObject* o, QEvent* e) {
@@ -84,7 +88,7 @@ bool MyWidget::eventFilter(QObject* o, QEvent* e) {
             update();
             return true;
         }
-        setText(text, curPos++);
+        setText(text, curPos);
         return false;
 	}
 	return false;
