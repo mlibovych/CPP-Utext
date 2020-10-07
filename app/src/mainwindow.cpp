@@ -21,7 +21,6 @@ MainWindow::~MainWindow()
 MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent)
 {
-    MyCursor *cursor = new MyCursor(this);
     QFont newFont = font();
 
     setBackgroundRole(QPalette::Midlight);
@@ -31,13 +30,9 @@ MyWidget::MyWidget(QWidget *parent)
     newFont.setPointSize(newFont.pointSize() + 20);
     setFont(newFont);
 
-    cursor->setFixedHeight(30);
-    cursor->setFixedWidth(2);
-    cursor->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-
-    // cursor->move(0, 0);
-
+    // timer.start(400, this);
 }
+
 
 void MyWidget::paintEvent(QPaintEvent *)
 {
@@ -48,6 +43,9 @@ void MyWidget::paintEvent(QPaintEvent *)
     int y = metrics.ascent() - metrics.descent();
 
     QPainter painter(this);
+
+    // auto start = std::chrono::steady_clock::now();
+
     for (int i = 0; i < getSize(); ++i) {
         painter.drawText(x, y,
                          QString(text[i]));
@@ -59,11 +57,15 @@ void MyWidget::paintEvent(QPaintEvent *)
                 curPosY += (metrics.ascent() - metrics.descent());
             }
         }
-        if (text[i] == '\n') {
+        if (text[i] == '\n' || x >= width()) {
             x = 0;
             y += (metrics.ascent() - metrics.descent());
         }
     }
+    // auto finish = std::chrono::steady_clock::now();
+    // auto duration = finish - start;
+    // std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << std::endl;
+
     if (hasFocus() && draw) {
         painter.drawLine(curPosX, curPosY,
                          curPosX, curPosY - (metrics.ascent() - metrics.descent()));
@@ -86,7 +88,17 @@ bool MyWidget::eventFilter(QObject* o, QEvent* e) {
         int key = k->key();
         QString newText = k->text();
 
-		if (key == Qt::Key_Tab) {
+        if (k->matches(QKeySequence::Paste)) {
+            if (QClipboard* c = QApplication::clipboard() ) {
+                if (const QMimeData* m = c->mimeData() ) {
+                    if (m->hasText()) {
+                        setText(m->text(), curPos);
+                        return false;
+                    }
+                }
+            }
+        }
+		else if (key == Qt::Key_Tab) {
             setText("\t", curPos);
             return true;
 		}
@@ -125,9 +137,16 @@ void MyWidget::setText(const QString newText) {
 }
 
 void MyWidget::setText(const QString newText, int pos) {
+    // auto start = std::chrono::steady_clock::now();
+
     text.insert(pos, newText);
+
+    // auto finish = std::chrono::steady_clock::now();
+    // auto duration = finish - start;
+    // std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << std::endl;
+
     if (!newText.isEmpty()) {
-        ++curPos;
+        curPos += newText.size();
     }
     update();
 }
@@ -144,7 +163,6 @@ MyCursor::MyCursor(QWidget *parent)
 {
     setBackgroundRole(QPalette::Midlight);
     setAutoFillBackground(true);
-    // timer.start(400, this);
 };
 
 void MyCursor::paintEvent(QPaintEvent *)
