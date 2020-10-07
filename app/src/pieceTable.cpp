@@ -96,7 +96,7 @@ void pieceTable::addText(char *str, int index, int len) {
             index_counter += (*it).m_len;
 
             if (index_counter > index) {
-                splitNode(piece, index_counter, str, index, len);
+                splitNode(it, index_counter, str, index, len);
                 break;
             }
             else if (index_counter == index) {
@@ -120,7 +120,7 @@ void pieceTable::splitNode(list<Piece>::iterator it, int counter, char *str, int
     Piece node1((*it).m_start, node1_len, (*it).m_source);
     m_pieces.insert(it, node1);
 
-    Piece node2(len, m_added_size, Source::added);
+    Piece node2(m_added_size, len, Source::added);
     m_pieces.insert(it, node2);
 
     (*it).m_len = node3_len;
@@ -137,6 +137,11 @@ void pieceTable::insertNode(list<Piece>::iterator it, char *str, int len) {
         (*it).m_len = len;
         (*it).m_start = m_added_size;
         (*it).m_source = Source::added;
+
+        if (--it == m_pieces.begin()) {
+            m_item = m_pieces.begin();
+            m_index = 0;
+        }
     }
 }
 

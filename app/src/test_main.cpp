@@ -42,8 +42,9 @@ int main() {
     std::cout << p2;
 
     p2.addText(" lovely sly", 114, 11);
-    std::cout << p2;
 
+    p2.addText("By Yulia Bondarenko.\n", 21, 21);
+    std::cout << p2;
 
     char c;
     while ((c = p2.getChar())) {
