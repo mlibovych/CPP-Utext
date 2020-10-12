@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
                         QMainWindow(parent),
                         ui(new Ui::MainWindow)
 {
-    MyWidget *text = new MyWidget;
+    TextArea *text = new TextArea;
 
     ui->setupUi(this);
     ui->horizontalLayout_4->addWidget(text);
