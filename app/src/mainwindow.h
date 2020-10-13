@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include <QtWidgets>
+#include <QSplitter>
 
 #include "myTab.h"
 #include "myTree.h"
@@ -19,6 +20,7 @@ class MainWindow : public QMainWindow
 private:
     Ui::MainWindow *ui;
 
+    QSplitter *splitter;
     myTab*  tab;
 
 public:

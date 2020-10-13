@@ -1,4 +1,5 @@
 #include "myTree.h"
+#include <iostream>
 
 myTree::myTree(QWidget *parent) :
                         QTreeView(parent)
@@ -27,7 +28,10 @@ void myTreeWidget::dropEvent(QDropEvent *event)
     QFileInfo info(filePath);
 
     if (info.isDir()) {
+        QTabWidget *tab = new QTabWidget(this);
         myTree* tree = new myTree();
+        std::cout << info.baseName().toStdString() << std::endl;
+        tab->addTab(tree, info.baseName());
         QFileSystemModel* dirmodel = new QFileSystemModel();
 
         dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
@@ -36,7 +40,7 @@ void myTreeWidget::dropEvent(QDropEvent *event)
         tree->setRootIndex(dirmodel->index(filePath));
         tree->setHeaderHidden(true);
         tree->hideDirModelCols(dirmodel);
-        layout->addWidget(tree);
+        layout->addWidget(tab);
     }
 }
 

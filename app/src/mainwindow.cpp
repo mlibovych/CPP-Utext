@@ -11,8 +11,11 @@ MainWindow::MainWindow(QWidget *parent) :
     myTreeWidget *tree = new myTreeWidget();
 
     ui->setupUi(this);
-    ui->horizontalLayout_4->addWidget(tree);
-    ui->horizontalLayout_4->addWidget(tab);
+
+    splitter = new QSplitter(ui->centralwidget);   
+    ui->horizontalLayout_4->addWidget(splitter);
+    splitter->addWidget(tree);
+    splitter->addWidget(tab);
 }
 
 MainWindow::~MainWindow()

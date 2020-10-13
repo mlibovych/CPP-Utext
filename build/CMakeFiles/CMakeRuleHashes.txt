@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+835d7e40342ee95bc2f33e401606adb5 app/CMakeFiles/utext_autogen
+8aa7c518696975dcb3766b0b02649a4b app/qrc_resources.cpp
