@@ -13,11 +13,15 @@ class myTree : public QTreeView
 public:
     explicit myTree(QWidget* parent = nullptr);
 
+    void hideDirModelCols(QFileSystemModel* dirmodel);
+
 };
 
 class myTreeWidget : public QWidget
 {
     Q_OBJECT
+private:
+    QVBoxLayout* layout = new QVBoxLayout(this);
 public:
     explicit myTreeWidget(QWidget* parent = nullptr);
 

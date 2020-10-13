@@ -10,9 +10,9 @@ myTreeWidget::myTreeWidget(QWidget *parent) :
                         QWidget(parent)
 {
     setAcceptDrops(true);
-    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
     setMinimumSize(160, 400);
-    setMaximumSize(160, 16777215);
+    setMaximumSize(260, 16777215);
 }
 
 
@@ -27,7 +27,16 @@ void myTreeWidget::dropEvent(QDropEvent *event)
     QFileInfo info(filePath);
 
     if (info.isDir()) {
-        std::cout << "aaa" << std::endl;
+        myTree* tree = new myTree();
+        QFileSystemModel* dirmodel = new QFileSystemModel();
+
+        dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
+        dirmodel->setRootPath(filePath);
+        tree->setModel(dirmodel);
+        tree->setRootIndex(dirmodel->index(filePath));
+        tree->setHeaderHidden(true);
+        tree->hideDirModelCols(dirmodel);
+        layout->addWidget(tree);
     }
 }
 
@@ -37,4 +46,10 @@ void myTreeWidget::paintEvent(QPaintEvent *)
     opt.init(this);
     QPainter p(this);
     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
- }
+}
+
+void myTree::hideDirModelCols(QFileSystemModel* dirmodel) {
+    for (int i = 1; i < dirmodel->columnCount(); ++i) {
+        hideColumn(i);
+    }
+}
