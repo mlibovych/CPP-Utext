@@ -5,6 +5,7 @@
 TextArea::TextArea(QWidget *parent) :
                         QPlainTextEdit(parent)
 {
+    setAcceptDrops(false);
 }
 
 TextArea::~TextArea()
