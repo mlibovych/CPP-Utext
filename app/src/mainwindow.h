@@ -6,6 +6,7 @@
 #include <QtWidgets>
 
 #include "myTab.h"
+#include "myTree.h"
 
 namespace Ui {
     class MainWindow;

@@ -16,4 +16,8 @@ public:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
 
+public slots:
+
+    void closeTab(int index);
+
 };

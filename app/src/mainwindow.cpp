@@ -8,8 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
                         ui(new Ui::MainWindow)
 {
     tab = new myTab();
+    myTreeWidget *tree = new myTreeWidget();
 
     ui->setupUi(this);
+    ui->horizontalLayout_4->addWidget(tree);
     ui->horizontalLayout_4->addWidget(tab);
 }
 

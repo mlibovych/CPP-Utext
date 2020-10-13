@@ -53,3 +53,7 @@ QTableView::item:selected {
 MyCursor {
  	background-color: DarkOrange;
 }
+
+myTreeWidget {
+ 	background-color: #696969;
+}

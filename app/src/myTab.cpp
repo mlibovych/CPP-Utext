@@ -4,6 +4,9 @@ myTab::myTab(QWidget *parent) :
                         QTabWidget(parent)
 {
     setAcceptDrops(true);
+    setMovable(true);
+    setTabsClosable(true);
+    QObject::connect(this, SIGNAL(tabCloseRequested(int)), SLOT(closeTab(int)));
 }
 
 
@@ -31,4 +34,9 @@ void myTab::dropEvent(QDropEvent *event)
             setCurrentIndex(addTab(area, filePath));
         }
     }
+}
+
+void myTab::closeTab(int index)
+{
+    removeTab(index);
 }
