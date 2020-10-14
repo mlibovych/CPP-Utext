@@ -26,3 +26,33 @@ MainWindow::~MainWindow()
     delete tree;
     delete splitter;
 }
+void MainWindow::on_actionsave_triggered()
+{
+    int index = tab->currentIndex();
+
+    if (index == -1)
+        return;
+
+    QString filename = tab->getFilename(index);
+    tab->setTabText(index, filename);
+
+    QTextDocument *doc = tab->getTextArea(filename)->document();
+
+    QTextDocumentWriter writer(filename);
+    if (!writer.write(doc))
+        QMessageBox::critical(this, "Save failed", "I don't mean to upset you, dear user, but something went terribly wrong when I tried to save the file.\nChances are, it's your fault, not mine((\nCarbon-based lifeforms make stupid mistakes all the time, please don't be too upset, do something about it and try again.\nGLHF!\n");
+}
+
+void MainWindow::on_actionactionundo_triggered()
+{
+    TextArea *area = tab->getTextArea();
+
+    area->undo();
+}
+
+void MainWindow::on_actionredo_triggered()
+{
+    TextArea *area = tab->getTextArea();
+
+    area->redo();
+}

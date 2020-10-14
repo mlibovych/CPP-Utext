@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include <map>
 
 #include <QtWidgets>
 
@@ -10,6 +11,9 @@
 class myTab : public QTabWidget
 {
     Q_OBJECT
+private:
+    std::map<QString, TextArea *> tab_content;
+
 public:
     explicit myTab(QWidget* parent = nullptr);
 
@@ -19,7 +23,11 @@ public:
     void addFile(QString filePath);
 
 public slots:
+    TextArea *getTextArea();
+    TextArea *getTextArea(const QString& filename);
+    QString getFilename(int index);
 
+public slots:
     void closeTab(int index);
-
+    void updateTabName();
 };
