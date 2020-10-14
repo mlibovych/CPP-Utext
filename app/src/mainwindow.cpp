@@ -42,8 +42,6 @@ void MainWindow::on_actionsave_triggered()
         tab->setTabText(index, filename);
     }
 
-    std::cout << filename.toStdString() << std::endl;
-
     QTextDocument *doc = tab->getTextArea(filename)->document();
 
     QTextDocumentWriter writer(filename);
