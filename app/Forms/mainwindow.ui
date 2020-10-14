@@ -124,7 +124,72 @@
     </rect>
    </property>
   </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea</set>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionsave"/>
+   <addaction name="actionactionundo"/>
+   <addaction name="actionredo"/>
+   <addaction name="actionfind"/>
+  </widget>
+  <action name="actionsave">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/save.png</normaloff>:/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionactionundo">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/undo.png</normaloff>:/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionundo</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/redo.png</normaloff>:/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>redo</string>
+   </property>
+  </action>
+  <action name="actionfind">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/find.png</normaloff>:/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>find</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
