@@ -1,8 +1,0 @@
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/CMakeFiles/rebuild_cache.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/CMakeFiles/edit_cache.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/rebuild_cache.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/edit_cache.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext_autogen.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/src/CMakeFiles/rebuild_cache.dir
-/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/src/CMakeFiles/edit_cache.dir
