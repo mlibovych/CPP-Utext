@@ -16,6 +16,8 @@ public:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
 
+    void addFile(QString filePath);
+
 public slots:
 
     void closeTab(int index);

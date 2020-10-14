@@ -18,6 +18,11 @@ void myTab::dragEnterEvent(QDragEnterEvent *event)
 void myTab::dropEvent(QDropEvent *event)
 {
     QString filePath = event->mimeData()->urls()[0].toLocalFile();
+
+    addFile(filePath);
+}
+
+void myTab::addFile(QString filePath) {
     QFileInfo info(filePath);
 
     if (info.isFile()) {

@@ -19,7 +19,6 @@ void myLabel::mousePressEvent(QMouseEvent *event) {
 
 void myLabel::slotRemove() {
     delete parent();
-    // static_cast<QWidget *>(parent())->hide();
 }
 
 myTreeScroll::myTreeScroll(QWidget *parent) :
@@ -30,6 +29,14 @@ myTreeScroll::myTreeScroll(QWidget *parent) :
 myTree::myTree(QWidget *parent) :
                         QTreeView(parent)
 {
+}
+
+void myTree::mousePressEvent(QMouseEvent *event) {
+    QTreeView::mousePressEvent(event);
+    if (event->button() == Qt::LeftButton) {
+        QString filePath = dirmodel->filePath(currentIndex());
+        parent()->parent()->parent()->parent()->parent()->parent()->parent()->findChild<myTab *>()->addFile(filePath);
+    }
 }
 
 
@@ -63,18 +70,19 @@ void myTreeWidget::dropEvent(QDropEvent *event)
 
     if (info.isDir()) {
         myTreeScroll *tab = new myTreeScroll(central);
-        QFileSystemModel* dirmodel = new QFileSystemModel();
-
-        dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
-        dirmodel->setRootPath(filePath);
 
         tab->label = new myLabel(filePath, tab);
         tab->tree = new myTree(tab);
+
+        tab->tree->dirmodel = new QFileSystemModel();
+        tab->tree->dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
+        tab->tree->dirmodel->setRootPath(filePath);
+
         tab->tree->absPath = filePath;
-        tab->tree->setModel(dirmodel);
-        tab->tree->setRootIndex(dirmodel->index(filePath));
+        tab->tree->setModel(tab->tree->dirmodel);
+        tab->tree->setRootIndex(tab->tree->dirmodel->index(filePath));
         tab->tree->setHeaderHidden(true);
-        tab->tree->hideDirModelCols(dirmodel);
+        tab->tree->hideDirModelCols(tab->tree->dirmodel);
 
         tab->mylayout->addWidget(tab->label);
         tab->mylayout->addWidget(tab->tree);

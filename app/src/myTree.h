@@ -6,7 +6,7 @@
 #include <QtWidgets>
 
 #include "textArea.h"
-#include "myTreeList.h"
+#include "myTab.h"
 
 class myLabel : public QLabel
 {
@@ -27,9 +27,11 @@ public:
     explicit myTree(QWidget* parent = nullptr);
 
     void hideDirModelCols(QFileSystemModel* dirmodel);
+    void mousePressEvent(QMouseEvent *event) override;
 
     QString absPath;
     QString dirName;
+    QFileSystemModel* dirmodel;
 };
 
 class myTreeScroll : public QWidget
