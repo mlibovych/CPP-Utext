@@ -8,6 +8,18 @@
 #include "textArea.h"
 #include "myTreeList.h"
 
+class myLabel : public QLabel
+{
+    Q_OBJECT
+public:
+    explicit myLabel(QString text, QWidget* parent = nullptr);
+    void mousePressEvent(QMouseEvent *event) override;
+
+public slots:
+    void slotRemove();
+
+};
+
 class myTree : public QTreeView
 {
     Q_OBJECT
@@ -27,7 +39,7 @@ public:
     explicit myTreeScroll(QWidget* parent = nullptr);
     void paintEvent(QPaintEvent *) override;
 
-    QLabel *label;
+    myLabel *label;
     myTree *tree;
     QGridLayout* mylayout = new QGridLayout(this);
 
