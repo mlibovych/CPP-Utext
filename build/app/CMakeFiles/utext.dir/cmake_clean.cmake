@@ -7,6 +7,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/utext.dir/main.cpp.o"
   "CMakeFiles/utext.dir/qrc_resources.cpp.o"
   "CMakeFiles/utext.dir/src/mainwindow.cpp.o"
+  "CMakeFiles/utext.dir/src/myTab.cpp.o"
+  "CMakeFiles/utext.dir/src/myTree.cpp.o"
+  "CMakeFiles/utext.dir/src/textArea.cpp.o"
   "CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
   "qrc_resources.cpp"
 )

@@ -4,6 +4,10 @@
 #include <iostream>
 
 #include <QtWidgets>
+#include <QSplitter>
+
+#include "myTab.h"
+#include "myTree.h"
 
 namespace Ui {
     class MainWindow;
@@ -16,28 +20,11 @@ class MainWindow : public QMainWindow
 private:
     Ui::MainWindow *ui;
 
+    QSplitter *splitter;
+    myTab*  tab;
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-};
-
-class MyWidget : public QWidget
-{
-    Q_OBJECT
-
-public:
-    MyWidget(QWidget *parent = nullptr);
-
-public slots:
-    void setText(/*const QString &newText*/) { text += "123"; update(); }
-    void setText(const QString newText) { text += newText; update(); }
-
-protected:
-    void paintEvent(QPaintEvent *event) override;
-
-    bool eventFilter(QObject* o, QEvent* e) override;
-
-private:
-    QString text;
 };

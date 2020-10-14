@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.18.4/bin/cmake
 
 # The command to remove a file.
-RM = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake -E rm -f
+RM = /usr/local/Cellar/cmake/3.18.4/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mlibovych/Desktop/CPP-Utext
+CMAKE_SOURCE_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mlibovych/Desktop/CPP-Utext/build
+CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/mlibovych/Desktop/CPP-Utext/build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.18.4/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/Cellar/cmake/3.18.4/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mlibovych/Desktop/CPP-Utext/build/CMakeFiles /Users/mlibovych/Desktop/CPP-Utext/build/app/src//CMakeFiles/progress.marks
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mlibovych/Desktop/CPP-Utext/build/CMakeFiles 0
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/src//CMakeFiles/progress.marks
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/clean
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,17 +116,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/preinstall
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/preinstall
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -148,6 +148,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/mlibovych/Desktop/CPP-Utext/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
