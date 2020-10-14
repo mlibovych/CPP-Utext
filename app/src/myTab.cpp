@@ -23,6 +23,10 @@ void myTab::dropEvent(QDropEvent *event)
 }
 
 void myTab::addFile(QString filePath) {
+    if (tab_content.count(filePath)) {
+        setCurrentIndex(indexOf(tab_content[filePath]));
+        return;
+    }
     QFileInfo info(filePath);
 
     if (info.isFile()) {
