@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.7
+** Created by: Qt User Interface Compiler version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,11 +10,8 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -41,7 +38,7 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QStringLiteral("MainWindow"));
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(969, 642);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -49,21 +46,21 @@ public:
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QStringLiteral("centralwidget"));
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout_3 = new QHBoxLayout(centralwidget);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         horizontalLayout = new QHBoxLayout();
 #ifndef Q_OS_MAC
         horizontalLayout->setSpacing(-1);
 #endif
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setSizeConstraint(QLayout::SetMinimumSize);
         label = new QLabel(centralwidget);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
         sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy);
         label->setMaximumSize(QSize(130, 60));
@@ -72,7 +69,7 @@ public:
         horizontalLayout->addWidget(label);
 
         label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
         QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -94,7 +91,7 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(2);
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
 
         verticalLayout_3->addLayout(horizontalLayout_4);
 
@@ -106,7 +103,7 @@ public:
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QStringLiteral("menubar"));
+        menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 969, 22));
         MainWindow->setMenuBar(menubar);
 
@@ -117,9 +114,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "ucode", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "text", Q_NULLPTR));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "ucode", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "text", nullptr));
     } // retranslateUi
 
 };

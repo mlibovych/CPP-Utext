@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.18.4/bin/cmake
+CMAKE_COMMAND = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.18.4/bin/cmake -E rm -f
+RM = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2
+CMAKE_SOURCE_DIR = /Users/mlibovych/Desktop/Qt/CPP-Utext
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
+CMAKE_BINARY_DIR = /Users/mlibovych/Desktop/Qt/CPP-Utext/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.18.4/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.18.4/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles /Users/kali/Documents/Programming/Unit/C++/utext2/build/app//CMakeFiles/progress.marks
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles 0
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app//CMakeFiles/progress.marks
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,22 +116,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/CMakeFiles/utext.dir/rule:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/utext.dir/rule
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/utext.dir/rule
 .PHONY : app/CMakeFiles/utext.dir/rule
 
 # Convenience name for target.
@@ -141,12 +141,12 @@ utext: app/CMakeFiles/utext.dir/rule
 
 # fast build rule for target.
 utext/fast:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/build
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/build
 .PHONY : utext/fast
 
 # Convenience name for target.
 app/CMakeFiles/utext_autogen.dir/rule:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/utext_autogen.dir/rule
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/utext_autogen.dir/rule
 .PHONY : app/CMakeFiles/utext_autogen.dir/rule
 
 # Convenience name for target.
@@ -156,7 +156,7 @@ utext_autogen: app/CMakeFiles/utext_autogen.dir/rule
 
 # fast build rule for target.
 utext_autogen/fast:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext_autogen.dir/build.make app/CMakeFiles/utext_autogen.dir/build
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext_autogen.dir/build.make app/CMakeFiles/utext_autogen.dir/build
 .PHONY : utext_autogen/fast
 
 main.o: main.cpp.o
@@ -165,7 +165,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -174,7 +174,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -183,7 +183,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 qrc_resources.o: qrc_resources.cpp.o
@@ -192,7 +192,7 @@ qrc_resources.o: qrc_resources.cpp.o
 
 # target to build an object file
 qrc_resources.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.o
 .PHONY : qrc_resources.cpp.o
 
 qrc_resources.i: qrc_resources.cpp.i
@@ -201,7 +201,7 @@ qrc_resources.i: qrc_resources.cpp.i
 
 # target to preprocess a source file
 qrc_resources.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.i
 .PHONY : qrc_resources.cpp.i
 
 qrc_resources.s: qrc_resources.cpp.s
@@ -210,7 +210,7 @@ qrc_resources.s: qrc_resources.cpp.s
 
 # target to generate assembly for a file
 qrc_resources.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/qrc_resources.cpp.s
 .PHONY : qrc_resources.cpp.s
 
 src/mainwindow.o: src/mainwindow.cpp.o
@@ -219,7 +219,7 @@ src/mainwindow.o: src/mainwindow.cpp.o
 
 # target to build an object file
 src/mainwindow.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.o
 .PHONY : src/mainwindow.cpp.o
 
 src/mainwindow.i: src/mainwindow.cpp.i
@@ -228,7 +228,7 @@ src/mainwindow.i: src/mainwindow.cpp.i
 
 # target to preprocess a source file
 src/mainwindow.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.i
 .PHONY : src/mainwindow.cpp.i
 
 src/mainwindow.s: src/mainwindow.cpp.s
@@ -237,7 +237,7 @@ src/mainwindow.s: src/mainwindow.cpp.s
 
 # target to generate assembly for a file
 src/mainwindow.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
 src/myTab.o: src/myTab.cpp.o
@@ -246,7 +246,7 @@ src/myTab.o: src/myTab.cpp.o
 
 # target to build an object file
 src/myTab.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.o
 .PHONY : src/myTab.cpp.o
 
 src/myTab.i: src/myTab.cpp.i
@@ -255,7 +255,7 @@ src/myTab.i: src/myTab.cpp.i
 
 # target to preprocess a source file
 src/myTab.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.i
 .PHONY : src/myTab.cpp.i
 
 src/myTab.s: src/myTab.cpp.s
@@ -264,7 +264,7 @@ src/myTab.s: src/myTab.cpp.s
 
 # target to generate assembly for a file
 src/myTab.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTab.cpp.s
 .PHONY : src/myTab.cpp.s
 
 src/myTree.o: src/myTree.cpp.o
@@ -273,7 +273,7 @@ src/myTree.o: src/myTree.cpp.o
 
 # target to build an object file
 src/myTree.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.o
 .PHONY : src/myTree.cpp.o
 
 src/myTree.i: src/myTree.cpp.i
@@ -282,7 +282,7 @@ src/myTree.i: src/myTree.cpp.i
 
 # target to preprocess a source file
 src/myTree.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.i
 .PHONY : src/myTree.cpp.i
 
 src/myTree.s: src/myTree.cpp.s
@@ -291,7 +291,7 @@ src/myTree.s: src/myTree.cpp.s
 
 # target to generate assembly for a file
 src/myTree.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/myTree.cpp.s
 .PHONY : src/myTree.cpp.s
 
 src/textArea.o: src/textArea.cpp.o
@@ -300,7 +300,7 @@ src/textArea.o: src/textArea.cpp.o
 
 # target to build an object file
 src/textArea.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.o
 .PHONY : src/textArea.cpp.o
 
 src/textArea.i: src/textArea.cpp.i
@@ -309,7 +309,7 @@ src/textArea.i: src/textArea.cpp.i
 
 # target to preprocess a source file
 src/textArea.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.i
 .PHONY : src/textArea.cpp.i
 
 src/textArea.s: src/textArea.cpp.s
@@ -318,7 +318,7 @@ src/textArea.s: src/textArea.cpp.s
 
 # target to generate assembly for a file
 src/textArea.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/src/textArea.cpp.s
 .PHONY : src/textArea.cpp.s
 
 utext_autogen/mocs_compilation.o: utext_autogen/mocs_compilation.cpp.o
@@ -327,7 +327,7 @@ utext_autogen/mocs_compilation.o: utext_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 utext_autogen/mocs_compilation.cpp.o:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o
 .PHONY : utext_autogen/mocs_compilation.cpp.o
 
 utext_autogen/mocs_compilation.i: utext_autogen/mocs_compilation.cpp.i
@@ -336,7 +336,7 @@ utext_autogen/mocs_compilation.i: utext_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 utext_autogen/mocs_compilation.cpp.i:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i
 .PHONY : utext_autogen/mocs_compilation.cpp.i
 
 utext_autogen/mocs_compilation.s: utext_autogen/mocs_compilation.cpp.s
@@ -345,7 +345,7 @@ utext_autogen/mocs_compilation.s: utext_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 utext_autogen/mocs_compilation.cpp.s:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/utext.dir/build.make app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s
 .PHONY : utext_autogen/mocs_compilation.cpp.s
 
 # Help Target
@@ -390,6 +390,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.18.4/bin/cmake
+CMAKE_COMMAND = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.18.4/bin/cmake -E rm -f
+RM = /Users/mlibovych/.brew/Cellar/cmake/3.18.3/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2
+CMAKE_SOURCE_DIR = /Users/mlibovych/Desktop/Qt/CPP-Utext
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
+CMAKE_BINARY_DIR = /Users/mlibovych/Desktop/Qt/CPP-Utext/build
 
 # Include any dependencies generated for this target.
 include app/CMakeFiles/utext.dir/depend.make
@@ -77,100 +77,101 @@ include app/CMakeFiles/utext.dir/progress.make
 include app/CMakeFiles/utext.dir/flags.make
 
 app/qrc_resources.cpp: ../app/resources/qmain.qss
+app/qrc_resources.cpp: app/resources/resources.qrc.depends
 app/qrc_resources.cpp: ../app/resources/resources.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /opt/anaconda3/bin/rcc --name resources --output /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp /Users/kali/Documents/Programming/Unit/C++/utext2/app/resources/resources.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_resources.cpp"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Users/mlibovych/.brew/Cellar/qt/5.15.1/bin/rcc --name resources --output /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/qrc_resources.cpp /Users/mlibovych/Desktop/Qt/CPP-Utext/app/resources/resources.qrc
 
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o: app/utext_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp
 
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp > CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp > CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.i
 
 app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp -o CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp -o CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.s
 
 app/CMakeFiles/utext.dir/main.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/main.cpp.o: ../app/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/utext.dir/main.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/main.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/utext.dir/main.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/main.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/app/main.cpp
 
 app/CMakeFiles/utext.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/main.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp > CMakeFiles/utext.dir/main.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/app/main.cpp > CMakeFiles/utext.dir/main.cpp.i
 
 app/CMakeFiles/utext.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/main.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp -o CMakeFiles/utext.dir/main.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/app/main.cpp -o CMakeFiles/utext.dir/main.cpp.s
 
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.o: ../app/src/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/mainwindow.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/mainwindow.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/mainwindow.cpp
 
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/src/mainwindow.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp > CMakeFiles/utext.dir/src/mainwindow.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/mainwindow.cpp > CMakeFiles/utext.dir/src/mainwindow.cpp.i
 
 app/CMakeFiles/utext.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/src/mainwindow.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp -o CMakeFiles/utext.dir/src/mainwindow.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/mainwindow.cpp -o CMakeFiles/utext.dir/src/mainwindow.cpp.s
 
 app/CMakeFiles/utext.dir/src/textArea.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/src/textArea.cpp.o: ../app/src/textArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object app/CMakeFiles/utext.dir/src/textArea.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/textArea.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object app/CMakeFiles/utext.dir/src/textArea.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/textArea.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/textArea.cpp
 
 app/CMakeFiles/utext.dir/src/textArea.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/src/textArea.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp > CMakeFiles/utext.dir/src/textArea.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/textArea.cpp > CMakeFiles/utext.dir/src/textArea.cpp.i
 
 app/CMakeFiles/utext.dir/src/textArea.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/src/textArea.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp -o CMakeFiles/utext.dir/src/textArea.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/textArea.cpp -o CMakeFiles/utext.dir/src/textArea.cpp.s
 
 app/CMakeFiles/utext.dir/src/myTab.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/src/myTab.cpp.o: ../app/src/myTab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object app/CMakeFiles/utext.dir/src/myTab.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/myTab.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object app/CMakeFiles/utext.dir/src/myTab.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/myTab.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTab.cpp
 
 app/CMakeFiles/utext.dir/src/myTab.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/src/myTab.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp > CMakeFiles/utext.dir/src/myTab.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTab.cpp > CMakeFiles/utext.dir/src/myTab.cpp.i
 
 app/CMakeFiles/utext.dir/src/myTab.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/src/myTab.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp -o CMakeFiles/utext.dir/src/myTab.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTab.cpp -o CMakeFiles/utext.dir/src/myTab.cpp.s
 
 app/CMakeFiles/utext.dir/src/myTree.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/src/myTree.cpp.o: ../app/src/myTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object app/CMakeFiles/utext.dir/src/myTree.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/myTree.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object app/CMakeFiles/utext.dir/src/myTree.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/src/myTree.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTree.cpp
 
 app/CMakeFiles/utext.dir/src/myTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/src/myTree.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp > CMakeFiles/utext.dir/src/myTree.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTree.cpp > CMakeFiles/utext.dir/src/myTree.cpp.i
 
 app/CMakeFiles/utext.dir/src/myTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/src/myTree.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp -o CMakeFiles/utext.dir/src/myTree.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTree.cpp -o CMakeFiles/utext.dir/src/myTree.cpp.s
 
 app/CMakeFiles/utext.dir/qrc_resources.cpp.o: app/CMakeFiles/utext.dir/flags.make
 app/CMakeFiles/utext.dir/qrc_resources.cpp.o: app/qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/qrc_resources.cpp.o -c /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/utext.dir/qrc_resources.cpp.o -c /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/qrc_resources.cpp
 
 app/CMakeFiles/utext.dir/qrc_resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utext.dir/qrc_resources.cpp.i"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp > CMakeFiles/utext.dir/qrc_resources.cpp.i
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/qrc_resources.cpp > CMakeFiles/utext.dir/qrc_resources.cpp.i
 
 app/CMakeFiles/utext.dir/qrc_resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utext.dir/qrc_resources.cpp.s"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp -o CMakeFiles/utext.dir/qrc_resources.cpp.s
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/qrc_resources.cpp -o CMakeFiles/utext.dir/qrc_resources.cpp.s
 
 # Object files for target utext
 utext_OBJECTS = \
@@ -193,12 +194,12 @@ utext_EXTERNAL_OBJECTS =
 ../utext: app/CMakeFiles/utext.dir/src/myTree.cpp.o
 ../utext: app/CMakeFiles/utext.dir/qrc_resources.cpp.o
 ../utext: app/CMakeFiles/utext.dir/build.make
-../utext: /opt/anaconda3/lib/libQt5Widgets.5.9.7.dylib
-../utext: /opt/anaconda3/lib/libQt5Gui.5.9.7.dylib
-../utext: /opt/anaconda3/lib/libQt5Core.5.9.7.dylib
+../utext: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/QtWidgets
+../utext: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/QtGui
+../utext: /Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/QtCore
 ../utext: app/CMakeFiles/utext.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../utext"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utext.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../utext"
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utext.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 app/CMakeFiles/utext.dir/build: ../utext
@@ -206,10 +207,10 @@ app/CMakeFiles/utext.dir/build: ../utext
 .PHONY : app/CMakeFiles/utext.dir/build
 
 app/CMakeFiles/utext.dir/clean:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && $(CMAKE_COMMAND) -P CMakeFiles/utext.dir/cmake_clean.cmake
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app && $(CMAKE_COMMAND) -P CMakeFiles/utext.dir/cmake_clean.cmake
 .PHONY : app/CMakeFiles/utext.dir/clean
 
 app/CMakeFiles/utext.dir/depend: app/qrc_resources.cpp
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kali/Documents/Programming/Unit/C++/utext2 /Users/kali/Documents/Programming/Unit/C++/utext2/app /Users/kali/Documents/Programming/Unit/C++/utext2/build /Users/kali/Documents/Programming/Unit/C++/utext2/build/app /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/mlibovych/Desktop/Qt/CPP-Utext/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mlibovych/Desktop/Qt/CPP-Utext /Users/mlibovych/Desktop/Qt/CPP-Utext/app /Users/mlibovych/Desktop/Qt/CPP-Utext/build /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app /Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : app/CMakeFiles/utext.dir/depend
 

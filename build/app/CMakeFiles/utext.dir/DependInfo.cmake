@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/main.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/myTab.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/myTree.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/textArea.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/app/main.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/main.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/qrc_resources.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/mainwindow.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTab.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/src/myTab.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/myTree.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/src/myTree.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/app/src/textArea.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/src/textArea.cpp.o"
+  "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/utext_autogen/mocs_compilation.cpp" "/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -28,12 +28,14 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../app"
   "app/utext_autogen/include"
   "../app/./src"
-  "/opt/anaconda3/include/qt"
-  "/opt/anaconda3/include/qt/QtCore"
-  "/opt/anaconda3/./mkspecs/macx-clang"
-  "/opt/anaconda3/include/qt/QtWidgets"
-  "/opt/anaconda3/include/qt/QtGui"
-  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Headers"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/./mkspecs/macx-clang"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Headers"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework"
+  "/Users/mlibovych/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Headers"
+  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers"
   )
 
 # Targets to which this target links.

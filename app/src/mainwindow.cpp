@@ -8,17 +8,21 @@ MainWindow::MainWindow(QWidget *parent) :
                         ui(new Ui::MainWindow)
 {
     tab = new myTab();
-    myTreeWidget *tree = new myTreeWidget();
+    tree = new myTreeWidget();
 
     ui->setupUi(this);
 
-    splitter = new QSplitter(ui->centralwidget);   
+    splitter = new QSplitter(ui->centralwidget);
     ui->horizontalLayout_4->addWidget(splitter);
     splitter->addWidget(tree);
     splitter->addWidget(tab);
+    splitter->setSizes({200, 700});
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete tab;
+    delete tree;
+    delete splitter;
 }

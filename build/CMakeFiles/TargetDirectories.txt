@@ -1,8 +1,8 @@
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles/rebuild_cache.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles/edit_cache.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/rebuild_cache.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/edit_cache.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext_autogen.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/src/CMakeFiles/rebuild_cache.dir
-/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/src/CMakeFiles/edit_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles/rebuild_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/CMakeFiles/edit_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/rebuild_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/edit_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/CMakeFiles/utext_autogen.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/src/CMakeFiles/rebuild_cache.dir
+/Users/mlibovych/Desktop/Qt/CPP-Utext/build/app/src/CMakeFiles/edit_cache.dir

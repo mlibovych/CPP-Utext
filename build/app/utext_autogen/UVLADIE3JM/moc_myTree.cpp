@@ -1,18 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'myTree.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.7)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "../../../../app/src/myTree.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'myTree.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.7. It"
+#error "This file was generated using the moc from 5.15.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,6 +21,76 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
+struct qt_meta_stringdata_myTreeScroll_t {
+    QByteArrayData data[1];
+    char stringdata0[13];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_myTreeScroll_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_myTreeScroll_t qt_meta_stringdata_myTreeScroll = {
+    {
+QT_MOC_LITERAL(0, 0, 12) // "myTreeScroll"
+
+    },
+    "myTreeScroll"
+};
+#undef QT_MOC_LITERAL
+
+static const uint qt_meta_data_myTreeScroll[] = {
+
+ // content:
+       8,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       0,    0, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+       0        // eod
+};
+
+void myTreeScroll::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
+}
+
+QT_INIT_METAOBJECT const QMetaObject myTreeScroll::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_myTreeScroll.data,
+    qt_meta_data_myTreeScroll,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
+
+
+const QMetaObject *myTreeScroll::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *myTreeScroll::qt_metacast(const char *_clname)
+{
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_myTreeScroll.stringdata0))
+        return static_cast<void*>(this);
+    return QWidget::qt_metacast(_clname);
+}
+
+int myTreeScroll::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QWidget::qt_metacall(_c, _id, _a);
+    return _id;
+}
 struct qt_meta_stringdata_myTree_t {
     QByteArrayData data[1];
     char stringdata0[7];
@@ -41,7 +112,7 @@ QT_MOC_LITERAL(0, 0, 6) // "myTree"
 static const uint qt_meta_data_myTree[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -62,10 +133,14 @@ void myTree::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     Q_UNUSED(_a);
 }
 
-const QMetaObject myTree::staticMetaObject = {
-    { &QTreeView::staticMetaObject, qt_meta_stringdata_myTree.data,
-      qt_meta_data_myTree,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject myTree::staticMetaObject = { {
+    QMetaObject::SuperData::link<QTreeView::staticMetaObject>(),
+    qt_meta_stringdata_myTree.data,
+    qt_meta_data_myTree,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *myTree::metaObject() const
@@ -107,7 +182,7 @@ QT_MOC_LITERAL(0, 0, 12) // "myTreeWidget"
 static const uint qt_meta_data_myTreeWidget[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        0,    0, // methods
@@ -128,10 +203,14 @@ void myTreeWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     Q_UNUSED(_a);
 }
 
-const QMetaObject myTreeWidget::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_myTreeWidget.data,
-      qt_meta_data_myTreeWidget,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject myTreeWidget::staticMetaObject = { {
+    QMetaObject::SuperData::link<QScrollArea::staticMetaObject>(),
+    qt_meta_stringdata_myTreeWidget.data,
+    qt_meta_data_myTreeWidget,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *myTreeWidget::metaObject() const
@@ -144,12 +223,12 @@ void *myTreeWidget::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_myTreeWidget.stringdata0))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QScrollArea::qt_metacast(_clname);
 }
 
 int myTreeWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QScrollArea::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

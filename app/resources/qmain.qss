@@ -57,3 +57,7 @@ MyCursor {
 myTreeWidget {
  	background-color: #696969;
 }
+
+myTreeScroll {
+    background-color: #696969;
+}
