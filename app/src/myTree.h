@@ -6,16 +6,7 @@
 #include <QtWidgets>
 
 #include "textArea.h"
-
-class myTreeScroll : public QWidget
-{
-    Q_OBJECT
-public:
-    explicit myTreeScroll(QWidget* parent = nullptr);
-    void paintEvent(QPaintEvent *) override;
-
-};
-
+#include "myTreeList.h"
 
 class myTree : public QTreeView
 {
@@ -25,6 +16,21 @@ public:
 
     void hideDirModelCols(QFileSystemModel* dirmodel);
 
+    QString absPath;
+    QString dirName;
+};
+
+class myTreeScroll : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit myTreeScroll(QWidget* parent = nullptr);
+    void paintEvent(QPaintEvent *) override;
+
+    QLabel *label;
+    myTree *tree;
+    QGridLayout* mylayout = new QGridLayout(this);
+
 };
 
 class myTreeWidget : public QScrollArea
@@ -32,7 +38,6 @@ class myTreeWidget : public QScrollArea
     Q_OBJECT
 private:
     myTreeScroll* central = new myTreeScroll(this);
-    QGridLayout* layout = new QGridLayout(central);
 public:
     explicit myTreeWidget(QWidget* parent = nullptr);
 

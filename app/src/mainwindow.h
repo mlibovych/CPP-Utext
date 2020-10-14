@@ -16,8 +16,6 @@ namespace Ui {
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    friend class myTree;
-    friend class myTab;
 
 private:
     Ui::MainWindow *ui;
@@ -25,7 +23,6 @@ private:
     QSplitter *splitter;
     myTab*  tab;
     myTreeWidget *tree;
-    // QList<QString> open_files;
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
