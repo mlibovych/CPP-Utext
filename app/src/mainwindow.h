@@ -23,9 +23,14 @@ private:
     myTab*  tab;
     myTreeWidget *tree;
 
+    QWidget *find;
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_actionfind_triggered();
 
 private slots:
     void on_actionsave_triggered();
