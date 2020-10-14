@@ -4,7 +4,6 @@
 #include <iostream>
 
 #include <QtWidgets>
-#include <QSplitter>
 
 #include "myTab.h"
 #include "myTree.h"
@@ -28,4 +27,6 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_actionsave_triggered();
 };

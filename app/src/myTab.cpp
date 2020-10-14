@@ -32,11 +32,35 @@ void myTab::dropEvent(QDropEvent *event)
             txtDoc->setPlainText(in.readAll());
             area->setDocument(txtDoc);
             setCurrentIndex(addTab(area, filePath));
+        
+            QObject::connect(area, SIGNAL(textChanged()), SLOT(updateTabName()));
+
+            tab_content[filePath] = area;
         }
     }
 }
 
 void myTab::closeTab(int index)
 {
+    tab_content.erase(tabText(index));
     removeTab(index);
+}
+
+void myTab::updateTabName() {
+    int index = currentIndex();
+
+    if (index == -1)
+        return;
+
+    QString tab_text = tabText(index);
+
+    if (tab_text[tab_text.size() - 1] == '*')
+        return;
+
+    setTabText(index, tab_text + "*");
+
+}
+
+TextArea *myTab::getTextArea(const QString& filename) {
+    return tab_content[filename];
 }

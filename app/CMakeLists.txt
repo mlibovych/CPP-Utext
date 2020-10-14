@@ -25,4 +25,4 @@ include_directories(./src)
 
 target_link_libraries(${TARGET} Qt5::Core Qt5::Widgets)
 
-set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../..)
+#set_target_properties(${TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../..)
