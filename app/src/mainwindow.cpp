@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
-    splitter = new QSplitter(ui->centralwidget);   
+    splitter = new QSplitter(ui->centralwidget);
     ui->horizontalLayout_4->addWidget(splitter);
     splitter->addWidget(tree);
     splitter->addWidget(tab);

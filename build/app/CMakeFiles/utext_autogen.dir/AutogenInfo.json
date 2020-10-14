@@ -1,74 +1,38 @@
 {
-	"BUILD_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2/app",
-	"CMAKE_EXECUTABLE" : "/usr/local/Cellar/cmake/3.18.4/bin/cmake",
-	"CMAKE_LIST_FILES" : 
-	[
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/app/CMakeLists.txt",
-		"/opt/anaconda3/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5/Qt5Config.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
-		"/usr/local/Cellar/cmake/3.18.4/share/cmake/Modules/CMakeParseArguments.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QMacJp2Plugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
-		"/opt/anaconda3/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/usr/local/Cellar/cmake/3.18.4/share/cmake/Modules/CMakeParseArguments.cmake",
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/app/resources/resources.qrc"
-	],
-	"CMAKE_SOURCE_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2",
+	"BUILD_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/utext_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext/app",
+	"CMAKE_EXECUTABLE" : "/Users/ybondarenk/.brew/Cellar/cmake/3.18.2/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.h",
+			"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/mainwindow.h",
 			"MU",
 			"UVLADIE3JM/moc_mainwindow.cpp"
 		],
 		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.h",
+			"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTab.h",
 			"MU",
 			"UVLADIE3JM/moc_myTab.cpp"
 		],
 		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.h",
+			"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTree.h",
 			"MU",
 			"UVLADIE3JM/moc_myTree.cpp"
 		],
 		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.h",
+			"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/textArea.h",
 			"MU",
 			"UVLADIE3JM/moc_textArea.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/utext_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/utext_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -79,73 +43,63 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/build/app",
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/app",
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src",
-		"/opt/anaconda3/include/qt",
-		"/opt/anaconda3/include/qt/QtCore",
-		"/opt/anaconda3/mkspecs/macx-clang",
-		"/opt/anaconda3/include/qt/QtWidgets",
-		"/opt/anaconda3/include/qt/QtGui",
-		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include",
-		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include",
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+		"/Users/ybondarenk/Desktop/unit/cpp/utext/build/app",
+		"/Users/ybondarenk/Desktop/unit/cpp/utext/app",
+		"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtCore.framework",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtCore.framework/Headers",
+		"/Users/ybondarenk/.brew/opt/qt/mkspecs/macx-clang",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtWidgets.framework",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtWidgets.framework/Headers",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtGui.framework",
+		"/Users/ybondarenk/.brew/opt/qt/lib/QtGui.framework/Headers",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+		"/Library/Developer/CommandLineTools/usr/include/c++/v1",
+		"/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include",
+		"/Library/Developer/CommandLineTools/usr/include",
+		"/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include"
 	],
 	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
 	"MOC_OPTIONS" : [],
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+		"/Library/Developer/CommandLineTools/usr/bin/c++",
 		"-dM",
 		"-E",
 		"-c",
-		"/usr/local/Cellar/cmake/3.18.4/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+		"/Users/ybondarenk/.brew/Cellar/cmake/3.18.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/utext_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp"
+		"/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/qrc_resources.cpp"
 	],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext_autogen.dir/ParseCache.txt",
-	"QT_MOC_EXECUTABLE" : "/opt/anaconda3/bin/moc",
-	"QT_UIC_EXECUTABLE" : "/opt/anaconda3/bin/uic",
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/Users/ybondarenk/.brew/opt/qt/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/Users/ybondarenk/.brew/opt/qt/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
-	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext_autogen.dir/AutogenUsed.txt",
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/Users/ybondarenk/Desktop/unit/cpp/utext/app/main.cpp", "MU" ],
 		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp",
+			"/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/mainwindow.cpp",
 			"MU"
 		],
-		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp",
-			"MU"
-		],
-		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp",
-			"MU"
-		],
-		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp",
-			"MU"
-		],
-		[
-			"/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp",
-			"MU"
-		]
+		[ "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTab.cpp", "MU" ],
+		[ "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTree.cpp", "MU" ],
+		[ "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/textArea.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp"
+		"/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/qrc_resources.cpp"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

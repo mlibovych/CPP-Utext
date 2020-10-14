@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.18.4/bin/cmake
+CMAKE_COMMAND = /Users/ybondarenk/.brew/Cellar/cmake/3.18.2/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.18.4/bin/cmake -E rm -f
+RM = /Users/ybondarenk/.brew/Cellar/cmake/3.18.2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2
+CMAKE_SOURCE_DIR = /Users/ybondarenk/Desktop/unit/cpp/utext
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
+CMAKE_BINARY_DIR = /Users/ybondarenk/Desktop/unit/cpp/utext/build
 
 # Utility rule file for utext_autogen.
 
@@ -73,8 +73,8 @@ CMAKE_BINARY_DIR = /Users/kali/Documents/Programming/Unit/C++/utext2/build
 include app/CMakeFiles/utext_autogen.dir/progress.make
 
 app/CMakeFiles/utext_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/kali/Documents/Programming/Unit/C++/utext2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target utext"
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && /usr/local/Cellar/cmake/3.18.4/bin/cmake -E cmake_autogen /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/ybondarenk/Desktop/unit/cpp/utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target utext"
+	cd /Users/ybondarenk/Desktop/unit/cpp/utext/build/app && /Users/ybondarenk/.brew/Cellar/cmake/3.18.2/bin/cmake -E cmake_autogen /Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext_autogen.dir/AutogenInfo.json ""
 
 utext_autogen: app/CMakeFiles/utext_autogen
 utext_autogen: app/CMakeFiles/utext_autogen.dir/build.make
@@ -87,10 +87,10 @@ app/CMakeFiles/utext_autogen.dir/build: utext_autogen
 .PHONY : app/CMakeFiles/utext_autogen.dir/build
 
 app/CMakeFiles/utext_autogen.dir/clean:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build/app && $(CMAKE_COMMAND) -P CMakeFiles/utext_autogen.dir/cmake_clean.cmake
+	cd /Users/ybondarenk/Desktop/unit/cpp/utext/build/app && $(CMAKE_COMMAND) -P CMakeFiles/utext_autogen.dir/cmake_clean.cmake
 .PHONY : app/CMakeFiles/utext_autogen.dir/clean
 
 app/CMakeFiles/utext_autogen.dir/depend:
-	cd /Users/kali/Documents/Programming/Unit/C++/utext2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kali/Documents/Programming/Unit/C++/utext2 /Users/kali/Documents/Programming/Unit/C++/utext2/app /Users/kali/Documents/Programming/Unit/C++/utext2/build /Users/kali/Documents/Programming/Unit/C++/utext2/build/app /Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/ybondarenk/Desktop/unit/cpp/utext/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ybondarenk/Desktop/unit/cpp/utext /Users/ybondarenk/Desktop/unit/cpp/utext/app /Users/ybondarenk/Desktop/unit/cpp/utext/build /Users/ybondarenk/Desktop/unit/cpp/utext/build/app /Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : app/CMakeFiles/utext_autogen.dir/depend
 

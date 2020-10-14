@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.9.7
+** Created by: The Resource Compiler for Qt version 5.15.1
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // /Users/kali/Documents/Programming/Unit/C++/utext2/app/resources/qmain.qss
+  // /Users/ybondarenk/Desktop/unit/cpp/utext/app/resources/qmain.qss
   0x0,0x0,0x3,0x1,
   0x23,
   0x4d,0x61,0x69,0x6e,0x57,0x69,0x6e,0x64,0x6f,0x77,0x20,0x7b,0xa,0x20,0x20,0x20,
@@ -77,7 +77,7 @@ static const unsigned char qt_resource_struct[] = {
 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   // :/qmain.qss
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0x0,
-0x0,0x0,0x1,0x75,0x22,0xc5,0xbe,0x10,
+0x0,0x0,0x1,0x75,0x26,0x92,0xd7,0x58,
 
 };
 
@@ -98,7 +98,6 @@ namespace QT_NAMESPACE {
 #endif
 
 bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
-
 bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
 #ifdef QT_NAMESPACE
@@ -108,16 +107,18 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_resources)();
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_resources)()
 {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
-        (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+        (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_resources)();
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_resources)()
 {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
-       (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+       (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 

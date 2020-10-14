@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/main.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/main.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/qrc_resources.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/mainwindow.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTab.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/myTab.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/myTree.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/myTree.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/app/src/textArea.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/src/textArea.cpp.o"
-  "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/utext_autogen/mocs_compilation.cpp" "/Users/kali/Documents/Programming/Unit/C++/utext2/build/app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/app/main.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/main.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/qrc_resources.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/qrc_resources.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/mainwindow.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/src/mainwindow.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTab.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/src/myTab.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/myTree.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/src/myTree.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/app/src/textArea.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/src/textArea.cpp.o"
+  "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/utext_autogen/mocs_compilation.cpp" "/Users/ybondarenk/Desktop/unit/cpp/utext/build/app/CMakeFiles/utext.dir/utext_autogen/mocs_compilation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -28,12 +28,14 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../app"
   "app/utext_autogen/include"
   "../app/./src"
-  "/opt/anaconda3/include/qt"
-  "/opt/anaconda3/include/qt/QtCore"
-  "/opt/anaconda3/./mkspecs/macx-clang"
-  "/opt/anaconda3/include/qt/QtWidgets"
-  "/opt/anaconda3/include/qt/QtGui"
-  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtCore.framework"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtCore.framework/Headers"
+  "/Users/ybondarenk/.brew/opt/qt/./mkspecs/macx-clang"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtWidgets.framework"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtWidgets.framework/Headers"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtGui.framework"
+  "/Users/ybondarenk/.brew/opt/qt/lib/QtGui.framework/Headers"
+  "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers"
   )
 
 # Targets to which this target links.
