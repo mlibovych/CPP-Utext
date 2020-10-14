@@ -58,9 +58,30 @@ void myTab::updateTabName() {
         return;
 
     setTabText(index, tab_text + "*");
-
 }
 
 TextArea *myTab::getTextArea(const QString& filename) {
     return tab_content[filename];
+}
+
+TextArea *myTab::getTextArea() {
+    int index = currentIndex();
+
+    if (index == -1)
+        return nullptr;
+
+    QString filename = getFilename(index);
+    return tab_content[filename];
+}
+
+QString myTab::getFilename(int index) {
+    QString filename = tabText(index);
+
+    if (filename[filename.size() - 1] == '*') {
+        std::string std_fname = filename.toStdString();
+        std::string new_fname(std_fname.begin(), std_fname.end() - 1);
+        return QString(new_fname.c_str());
+    }
+
+    return filename;
 }

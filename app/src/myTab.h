@@ -20,7 +20,9 @@ public:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
 
+    TextArea *getTextArea();
     TextArea *getTextArea(const QString& filename);
+    QString getFilename(int index);
 
 public slots:
     void closeTab(int index);

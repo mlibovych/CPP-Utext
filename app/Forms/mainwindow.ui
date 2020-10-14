@@ -159,6 +159,9 @@
    <property name="text">
     <string>save</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionactionundo">
    <property name="icon">
@@ -185,6 +188,9 @@
    </property>
    <property name="text">
     <string>find</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>

@@ -29,4 +29,6 @@ public:
 
 private slots:
     void on_actionsave_triggered();
+    void on_actionactionundo_triggered();
+    void on_actionredo_triggered();
 };
