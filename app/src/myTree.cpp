@@ -1,6 +1,27 @@
 #include "myTree.h"
 #include <iostream>
 
+myLabel::myLabel(QString text, QWidget *parent) :
+                        QLabel(text, parent)
+{
+}
+
+void myLabel::mousePressEvent(QMouseEvent *event) {
+    if (event->button() == Qt::RightButton) {
+        QMenu* menu = new QMenu(this);
+        QAction* removeDevice = new QAction(("Remove folder from workspace"), this);
+
+        connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+        menu->addAction(removeDevice);
+        menu->popup(this->mapToGlobal(event->pos()));
+    }
+}
+
+void myLabel::slotRemove() {
+    delete parent();
+    // static_cast<QWidget *>(parent())->hide();
+}
+
 myTreeScroll::myTreeScroll(QWidget *parent) :
                         QWidget(parent)
 {
@@ -32,8 +53,8 @@ void myTreeWidget::dropEvent(QDropEvent *event)
 {
     QString filePath = event->mimeData()->urls()[0].toLocalFile();
     QFileInfo info(filePath);
-
     QList<myTreeScroll*> plist = central->findChildren<myTreeScroll*>();
+
     if (std::count_if(plist.begin(), plist.end(), [filePath](myTreeScroll* tab) {
             return tab->tree->absPath == filePath;
         })) {
@@ -47,7 +68,7 @@ void myTreeWidget::dropEvent(QDropEvent *event)
         dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
         dirmodel->setRootPath(filePath);
 
-        tab->label = new QLabel(filePath, tab);
+        tab->label = new myLabel(filePath, tab);
         tab->tree = new myTree(tab);
         tab->tree->absPath = filePath;
         tab->tree->setModel(dirmodel);
