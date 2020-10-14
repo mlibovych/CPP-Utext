@@ -7,6 +7,16 @@
 
 #include "textArea.h"
 
+class myTreeScroll : public QWidget
+{
+    Q_OBJECT
+public:
+    explicit myTreeScroll(QWidget* parent = nullptr);
+    void paintEvent(QPaintEvent *) override;
+
+};
+
+
 class myTree : public QTreeView
 {
     Q_OBJECT
@@ -17,11 +27,12 @@ public:
 
 };
 
-class myTreeWidget : public QWidget
+class myTreeWidget : public QScrollArea
 {
     Q_OBJECT
 private:
-    QVBoxLayout* layout = new QVBoxLayout(this);
+    myTreeScroll* central = new myTreeScroll(this);
+    QGridLayout* layout = new QGridLayout(central);
 public:
     explicit myTreeWidget(QWidget* parent = nullptr);
 

@@ -1,6 +1,11 @@
 #include "myTree.h"
 #include <iostream>
 
+myTreeScroll::myTreeScroll(QWidget *parent) :
+                        QWidget(parent)
+{
+}
+
 myTree::myTree(QWidget *parent) :
                         QTreeView(parent)
 {
@@ -8,12 +13,13 @@ myTree::myTree(QWidget *parent) :
 
 
 myTreeWidget::myTreeWidget(QWidget *parent) :
-                        QWidget(parent)
+                        QScrollArea(parent)
 {
     setAcceptDrops(true);
-    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
-    setMinimumSize(160, 400);
-    setMaximumSize(260, 16777215);
+    setMinimumSize(1, 400);
+    setWidget(central);
+    setWidgetResizable(true);
+    central->setAccessibleName("treeWidget1");
 }
 
 
@@ -30,8 +36,8 @@ void myTreeWidget::dropEvent(QDropEvent *event)
     if (info.isDir()) {
         QTabWidget *tab = new QTabWidget(this);
         myTree* tree = new myTree();
-        std::cout << info.baseName().toStdString() << std::endl;
-        tab->addTab(tree, info.baseName());
+        tab->addTab(tree, filePath);
+        tab->setMinimumSize(-1, 150);
         QFileSystemModel* dirmodel = new QFileSystemModel();
 
         dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
@@ -45,6 +51,14 @@ void myTreeWidget::dropEvent(QDropEvent *event)
 }
 
 void myTreeWidget::paintEvent(QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.init(viewport());
+    QPainter p(viewport());
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, viewport());
+}
+
+void myTreeScroll::paintEvent(QPaintEvent *)
 {
     QStyleOption opt;
     opt.init(this);
