@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
                         QMainWindow(parent),
                         ui(new Ui::MainWindow)
 {
-    find = nullptr;
+    finder = nullptr;
     tab = new myTab();
     tree = new myTreeWidget();
 
@@ -61,24 +61,8 @@ void MainWindow::on_actionredo_triggered()
 
 void MainWindow::on_actionfind_triggered()
 {
-    if (find)
-        delete find;
+    if (finder)
+        delete finder;
 
-    find = new QWidget;
-    find->setMinimumSize(250, 100);
-    find->setMaximumSize(250, 100);
-
-    QLineEdit *edit = new QLineEdit();
-    edit->setPlaceholderText("Enter text or regex");
-
-    QPushButton *button_find = new QPushButton("Find");
-    QPushButton *button_replace = new QPushButton("Replace");
-    button_replace->setEnabled(false);
-
-    QGridLayout *l = new QGridLayout(find);
-    l->addWidget(edit, 0, 0, 1, 2);
-    l->addWidget(button_find, 1, 0, 1, 1);
-    l->addWidget(button_replace, 1, 1, 1, 1);
-
-    find->show();
+    finder = new Finder(tab->getTextArea());
 }

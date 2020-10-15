@@ -12,7 +12,7 @@ set(TARGET utext)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-set(SOURCES main.cpp src/mainwindow.cpp src/textArea.cpp src/myTab.cpp src/myTree.cpp)
+set(SOURCES main.cpp src/mainwindow.cpp src/textArea.cpp src/myTab.cpp src/myTree.cpp src/finder.cpp)
 set(HEADERS src/mainwindow.h src/textArea.h src/myTab.h src/myTree.h)
 set(UI Forms/mainwindow.ui)
 
