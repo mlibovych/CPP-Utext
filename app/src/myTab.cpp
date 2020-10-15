@@ -10,7 +10,6 @@ myTab::myTab(QWidget *parent) :
     QObject::connect(this, SIGNAL(tabCloseRequested(int)), SLOT(closeTab(int)));
 }
 
-
 void myTab::dragEnterEvent(QDragEnterEvent *event)
 {
     event->accept();
