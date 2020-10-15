@@ -5,6 +5,7 @@ ___
     Ucode project: utag - app to read and write tags of mp3 files in c++
 ### Developers:
  [Maxim Libovych](https://github.com/mlibovych)
+ [Yulia Bondarenko](https://github.com/kali-y23)
 
 ​
 ### Screenshots
