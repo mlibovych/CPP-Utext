@@ -17,6 +17,9 @@ void myTab::dragEnterEvent(QDragEnterEvent *event)
 
 void myTab::dropEvent(QDropEvent *event)
 {
+    if (event->mimeData()->urls().empty()) {
+        return;
+    }
     QString filePath = event->mimeData()->urls()[0].toLocalFile();
 
     addFile(filePath);
@@ -54,7 +57,13 @@ void myTab::renameFile(QString oldPath, QString newPath) {
     if (tab_content.count(oldPath)) {
         tab_content[newPath] = tab_content[oldPath];
         tab_content.erase(oldPath);
-        setTabText(indexOf(tab_content[newPath]), newPath);
+
+        QString tabtext = tabText(indexOf(tab_content[newPath]));
+        if (tabtext[tabtext.size() - 1] == '*')
+            setTabText(indexOf(tab_content[newPath]), newPath + "*");
+        else
+            setTabText(indexOf(tab_content[newPath]), newPath);
+
         setTabToolTip(indexOf(tab_content[newPath]), newPath);
     }
 }
