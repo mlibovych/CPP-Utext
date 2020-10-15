@@ -60,7 +60,7 @@ void myTree::mousePressEvent(QMouseEvent *event) {
             if (info.isDir()) {
                 QAction* newFile = new QAction(("Create new file"), this);
 
-                // connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+                connect(newFile, SIGNAL(triggered()), this, SLOT(slotCreate()));
                 menu->addAction(newFile);
             }
             menu->popup(this->mapToGlobal(event->pos()));
@@ -88,6 +88,14 @@ void myTree::slotRemove() {
     if (QFile::remove(filePath)) {
         emit fileRemoved(filePath);
     }
+}
+
+void myTree::slotCreate() {
+    QString dirPath = dirmodel->filePath(currentIndex());
+    QString newName = QInputDialog::getText(this, "Create", "Enter new file name", QLineEdit::Normal);
+    QFile file(dirPath + "/" + newName);
+
+    file.open(QIODevice::ReadWrite);
 }
 
 

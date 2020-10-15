@@ -37,6 +37,7 @@ public:
 public slots:
     void slotRename();
     void slotRemove();
+    void slotCreate();
 
 signals:
     void fileRenamed(QString oldPath, QString newPath);
