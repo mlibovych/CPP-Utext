@@ -54,6 +54,11 @@ void Finder::setupGUI() {
     window->show();
 }
 
+void Finder::setTextArea(TextArea *textArea) {
+    area = textArea;
+    find();
+}
+
 void Finder::find() {
     if (!area)
         return;

@@ -30,6 +30,8 @@ public:
     Finder(TextArea *area);
     ~Finder();
 
+    void setTextArea(TextArea *area);
+
 private:
     void setupGUI();
     void setText();
