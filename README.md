@@ -2,14 +2,12 @@
 ___
 ​
 ### Description:
-    Ucode project: utag - app to read and write tags of mp3 files in c++
+    Ucode project: utext - a text editor, which allows to manipulate the flesystem and provides basic functionality of all modern text editors.
 ### Developers:
  [Maxim Libovych](https://github.com/mlibovych)
+
  [Yulia Bondarenko](https://github.com/kali-y23)
 
-​
-### Screenshots
- ![utag main](/app/resources/main_utag.png)
 ​
 ### Tech/framework used
 ​
@@ -20,10 +18,6 @@ ___
 #### 2.GUI library
 ​
  [Qt](https://www.qt.io)
-​
-#### 3. External Libraries
-​
- [Taglib](https://taglib.org)
 
 ### Installation:
     1. git clone --recursive https://github.com/mlibovych/CPP-Utag
