@@ -58,10 +58,13 @@ void myTree::mousePressEvent(QMouseEvent *event) {
             menu->addAction(renameFile);
             menu->addAction(deleteFile);
             if (info.isDir()) {
-                QAction* newFile = new QAction(("Create new file"), this);
+                QAction* newFile = new QAction(("New file"), this);
+                QAction* newDir = new QAction(("New folder"), this);
 
                 connect(newFile, SIGNAL(triggered()), this, SLOT(slotCreate()));
+                connect(newDir, SIGNAL(triggered()), this, SLOT(slotCreateDir()));
                 menu->addAction(newFile);
+                menu->addAction(newDir);
             }
             menu->popup(this->mapToGlobal(event->pos()));
         }
@@ -98,6 +101,14 @@ void myTree::slotCreate() {
     file.open(QIODevice::ReadWrite);
 }
 
+void myTree::slotCreateDir() {
+    QString dirPath = dirmodel->filePath(currentIndex());
+    QString newName = QInputDialog::getText(this, "Create", "Enter new folder name", QLineEdit::Normal);
+    QDir newDir;
+
+    newDir.mkpath(dirPath + "/" + newName);
+}
+
 
 myTreeWidget::myTreeWidget(QWidget *parent) :
                         QScrollArea(parent)
@@ -117,6 +128,9 @@ void myTreeWidget::dragEnterEvent(QDragEnterEvent *event)
 
 void myTreeWidget::dropEvent(QDropEvent *event)
 {
+    if (event->mimeData()->urls().empty()) {
+        return;
+    }
     QString filePath = event->mimeData()->urls()[0].toLocalFile();
     QFileInfo info(filePath);
     QList<myTreeScroll*> plist = central->findChildren<myTreeScroll*>();
