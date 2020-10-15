@@ -7,6 +7,7 @@
 
 #include "myTab.h"
 #include "myTree.h"
+#include "finder.h"
 
 namespace Ui {
     class MainWindow;
@@ -23,9 +24,14 @@ private:
     myTab*  tab;
     myTreeWidget *tree;
 
+    Finder *finder;
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_actionfind_triggered();
 
 private slots:
     void on_actionsave_triggered();

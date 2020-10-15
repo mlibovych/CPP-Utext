@@ -22,7 +22,6 @@ public:
 
     void addFile(QString filePath);
 
-public slots:
     TextArea *getTextArea();
     TextArea *getTextArea(const QString& filename);
     QString getFilename(int index);

@@ -4,6 +4,8 @@
         <file>redo.png</file>
         <file>save.png</file>
         <file>find.png</file>
+        <file>next.png</file>
+        <file>prev.png</file>
         <file>qmain.qss</file>
     </qresource>
 </RCC>

@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
                         QMainWindow(parent),
                         ui(new Ui::MainWindow)
 {
+    finder = nullptr;
     tab = new myTab();
     tree = new myTreeWidget();
 
@@ -34,13 +35,14 @@ void MainWindow::on_actionsave_triggered()
         return;
 
     QString filename = tab->getFilename(index);
-    tab->setTabText(index, filename);
 
     QTextDocument *doc = tab->getTextArea(filename)->document();
 
     QTextDocumentWriter writer(filename);
     if (!writer.write(doc))
         QMessageBox::critical(this, "Save failed", "I don't mean to upset you, dear user, but something went terribly wrong when I tried to save the file.\nChances are, it's your fault, not mine((\nCarbon-based lifeforms make stupid mistakes all the time, please don't be too upset, do something about it and try again.\nGLHF!\n");
+    else
+        tab->setTabText(index, filename);
 }
 
 void MainWindow::on_actionactionundo_triggered()
@@ -55,4 +57,12 @@ void MainWindow::on_actionredo_triggered()
     TextArea *area = tab->getTextArea();
 
     area->redo();
+}
+
+void MainWindow::on_actionfind_triggered()
+{
+    if (finder)
+        delete finder;
+
+    finder = new Finder(tab->getTextArea());
 }
