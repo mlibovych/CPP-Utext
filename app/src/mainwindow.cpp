@@ -18,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     splitter->addWidget(tree);
     splitter->addWidget(tab);
     splitter->setSizes({200, 700});
+
+    QObject::connect(tab, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 }
 
 MainWindow::~MainWindow()
@@ -65,4 +67,10 @@ void MainWindow::on_actionfind_triggered()
         delete finder;
 
     finder = new Finder(tab->getTextArea());
+}
+
+void MainWindow::tabChanged(int index) {
+    if (finder) {
+        finder->setTextArea(tab->getTextArea(tab->getFilename(index)));
+    }
 }

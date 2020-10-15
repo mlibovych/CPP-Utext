@@ -41,6 +41,7 @@ void myTab::addFile(QString filePath) {
             txtDoc->setPlainText(in.readAll());
             area->setDocument(txtDoc);
             setCurrentIndex(addTab(area, filePath));
+            emit currentChanged(currentIndex());
             QObject::connect(area, SIGNAL(textChanged()), SLOT(updateTabName()));
 
             tab_content[filePath] = area;
