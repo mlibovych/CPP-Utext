@@ -41,6 +41,8 @@ void MainWindow::on_actionsave_triggered()
     QTextDocument *doc = tab->getTextArea(filename)->document();
 
     QTextDocumentWriter writer(filename);
+    writer.setFormat("plaintext");
+
     if (!writer.write(doc))
         QMessageBox::critical(this, "Save failed", "I don't mean to upset you, dear user, but something went terribly wrong when I tried to save the file.\nChances are, it's your fault, not mine((\nCarbon-based lifeforms make stupid mistakes all the time, please don't be too upset, do something about it and try again.\nGLHF!\n");
     else
