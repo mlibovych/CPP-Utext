@@ -11,7 +11,7 @@ void myLabel::mousePressEvent(QMouseEvent *event) {
         QMenu* menu = new QMenu(this);
         QAction* removeDevice = new QAction(("Remove folder from workspace"), this);
 
-        connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+        connect(removeDevice, SIGNAL(triggered()), SLOT(slotRemove()));
         menu->addAction(removeDevice);
         menu->popup(this->mapToGlobal(event->pos()));
     }
@@ -29,13 +29,55 @@ myTreeScroll::myTreeScroll(QWidget *parent) :
 myTree::myTree(QWidget *parent) :
                         QTreeView(parent)
 {
+    connect(this, SIGNAL(fileRenamed(QString, QString)), getMyTab(), SLOT(renameFile(QString, QString)));
 }
 
 void myTree::mousePressEvent(QMouseEvent *event) {
+    QString filePath;
+
     QTreeView::mousePressEvent(event);
+    filePath = dirmodel->filePath(indexAt(event->pos()));
     if (event->button() == Qt::LeftButton) {
-        QString filePath = dirmodel->filePath(currentIndex());
-        parent()->parent()->parent()->parent()->parent()->parent()->parent()->findChild<myTab *>()->addFile(filePath);
+        QFileInfo info(filePath);
+
+        if (info.exists() && info.isFile()) {
+            getMyTab()->addFile(filePath);
+        }
+    }
+    else if (event->button() == Qt::RightButton) {
+        QFileInfo info(filePath);
+
+        if (info.exists()) {
+            QMenu* menu = new QMenu(this);
+            QAction* renameFile = new QAction(("Rename"), this);
+            QAction* deleteFile = new QAction(("Delete"), this);
+
+            connect(renameFile, SIGNAL(triggered()), SLOT(slotRename()));
+            // connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+            menu->addAction(renameFile);
+            menu->addAction(deleteFile);
+            if (info.isDir()) {
+                QAction* newFile = new QAction(("Create new file"), this);
+
+                // connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+                menu->addAction(newFile);
+            }
+            menu->popup(this->mapToGlobal(event->pos()));
+        }
+    }
+}
+
+myTab* myTree::getMyTab(void) {
+    return parent()->parent()->parent()->parent()->parent()->parent()->parent()->findChild<myTab *>();
+}
+
+void myTree::slotRename() {
+    QString filePath = dirmodel->filePath(currentIndex());
+    QString newName = QInputDialog::getText(this, "Rename", "Enter new file name", QLineEdit::Normal);
+    QFileInfo info(filePath);
+
+    if (QFile::rename(filePath, info.absolutePath() + "/" + newName)) {
+        emit fileRenamed(filePath, info.absolutePath() + "/" + newName);
     }
 }
 

@@ -26,8 +26,7 @@ public slots:
     TextArea *getTextArea();
     TextArea *getTextArea(const QString& filename);
     QString getFilename(int index);
-
-public slots:
     void closeTab(int index);
     void updateTabName();
+    void renameFile(QString oldPath, QString newPath);
 };

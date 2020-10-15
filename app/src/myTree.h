@@ -28,10 +28,17 @@ public:
 
     void hideDirModelCols(QFileSystemModel* dirmodel);
     void mousePressEvent(QMouseEvent *event) override;
+    myTab* getMyTab(void);
 
     QString absPath;
     QString dirName;
     QFileSystemModel* dirmodel;
+
+public slots:
+    void slotRename();
+
+signals:
+    void fileRenamed(QString oldPath, QString newPath);
 };
 
 class myTreeScroll : public QWidget

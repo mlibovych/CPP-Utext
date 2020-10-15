@@ -6,6 +6,7 @@ myTab::myTab(QWidget *parent) :
     setAcceptDrops(true);
     setMovable(true);
     setTabsClosable(true);
+    setUsesScrollButtons(true);
     QObject::connect(this, SIGNAL(tabCloseRequested(int)), SLOT(closeTab(int)));
 }
 
@@ -27,6 +28,7 @@ void myTab::addFile(QString filePath) {
         setCurrentIndex(indexOf(tab_content[filePath]));
         return;
     }
+
     QFileInfo info(filePath);
 
     if (info.isFile()) {
@@ -41,10 +43,20 @@ void myTab::addFile(QString filePath) {
             txtDoc->setPlainText(in.readAll());
             area->setDocument(txtDoc);
             setCurrentIndex(addTab(area, filePath));
+            setTabToolTip(currentIndex(), filePath);
             QObject::connect(area, SIGNAL(textChanged()), SLOT(updateTabName()));
 
             tab_content[filePath] = area;
         }
+    }
+}
+
+void myTab::renameFile(QString oldPath, QString newPath) {
+    if (tab_content.count(oldPath)) {
+        tab_content[newPath] = tab_content[oldPath];
+        tab_content.erase(oldPath);
+        setTabText(indexOf(tab_content[newPath]), newPath);
+        setTabToolTip(indexOf(tab_content[newPath]), newPath);
     }
 }
 
