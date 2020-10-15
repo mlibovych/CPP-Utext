@@ -29,4 +29,6 @@ public:
 public slots:
     void closeTab(int index);
     void updateTabName();
+    void renameFile(QString oldPath, QString newPath);
+    void removeFile(QString filePath);
 };
