@@ -24,7 +24,7 @@ ___
     2. cmake . -Bbuild -Wdev -Werror=dev && cmake --build ./build
 
 ### How to use?
-    ./utag [directory]
+    ./utext
 
 
 ### License
