@@ -10,13 +10,15 @@ class Finder : public QObject {
 
 private:
     TextArea *area;
-    QLineEdit *edit;
+
+    QLineEdit *find_edit;
+    QLineEdit *replace_edit;
     QPushButton *button_find;
     QPushButton *button_replace;
     QPushButton *button_replace_all;
     QLabel *count;
-    QPushButton *next;
-    QPushButton *prev;
+    QPushButton *button_next;
+    QPushButton *button_prev;
     QGridLayout *l;
     QWidget *window;
 
@@ -29,10 +31,13 @@ public:
     ~Finder();
 
 private:
+    void setupGUI();
     void setText();
 
 public slots:
-    void findButtonClicked();
-    void prevButtonClicked();
-    void nextButtonClicked();
+    void find();
+    void prev();
+    void next();
+    void replace();
+    void replaceAll();
 };

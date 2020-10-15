@@ -1,12 +1,24 @@
 #include "finder.h"
 
 Finder::Finder(TextArea *text_area) : area(text_area) {
-    window = new QWidget;
-    window->setMinimumSize(250, 120);
-    window->setMaximumSize(250, 120);
+    setupGUI();
+}
 
-    edit = new QLineEdit();
-    edit->setPlaceholderText("Enter text or regex");
+Finder::~Finder() {
+    delete l;
+    delete window;
+}
+
+void Finder::setupGUI() {
+    window = new QWidget;
+    window->setMinimumSize(250, 160);
+    window->setMaximumSize(250, 160);
+
+    find_edit = new QLineEdit();
+    find_edit->setPlaceholderText("Enter text or regex");
+    replace_edit = new QLineEdit();
+    replace_edit->setPlaceholderText("Enter replacement text");
+    replace_edit->setEnabled(false);
 
     button_find = new QPushButton("Find");
     button_replace = new QPushButton("Replace");
@@ -15,41 +27,41 @@ Finder::Finder(TextArea *text_area) : area(text_area) {
     button_replace_all->setEnabled(false);
 
     QIcon icon_prev(":/prev.png");
-    prev = new QPushButton(icon_prev, "");
+    button_prev = new QPushButton(icon_prev, "");
     QIcon icon_next(":/next.png");
-    next = new QPushButton(icon_next, "");
+    button_next = new QPushButton(icon_next, "");
     count = new QLabel("0 out of 0");
 
-    next->setEnabled(false);
-    prev->setEnabled(false);
+    button_next->setEnabled(false);
+    button_prev->setEnabled(false);
 
     l = new QGridLayout(window);
-    l->addWidget(edit, 0, 0, 1, 3);
-    l->addWidget(button_find, 1, 0, 1, 1);
-    l->addWidget(button_replace, 1, 1, 1, 1);
-    l->addWidget(button_replace_all, 1, 2, 1, 1);
-    l->addWidget(prev, 2, 0, 1, 1);
-    l->addWidget(count, 2, 1, 1, 1);
-    l->addWidget(next, 2, 2, 1, 1);
+    l->addWidget(find_edit, 0, 0, 1, 3);
+    l->addWidget(replace_edit, 1, 0, 1, 3);
+    l->addWidget(button_find, 2, 0, 1, 1);
+    l->addWidget(button_replace, 2, 1, 1, 1);
+    l->addWidget(button_replace_all, 2, 2, 1, 1);
+    l->addWidget(button_prev, 3, 0, 1, 1);
+    l->addWidget(count, 3, 1, 1, 1);
+    l->addWidget(button_next, 3, 2, 1, 1);
 
-    QObject::connect(button_find, SIGNAL(clicked()), SLOT(findButtonClicked()));
-    QObject::connect(prev, SIGNAL(clicked()), SLOT(prevButtonClicked()));
-    QObject::connect(next, SIGNAL(clicked()), SLOT(nextButtonClicked()));
+    QObject::connect(button_find, SIGNAL(clicked()), SLOT(find()));
+    QObject::connect(button_prev, SIGNAL(clicked()), SLOT(prev()));
+    QObject::connect(button_next, SIGNAL(clicked()), SLOT(next()));
+    QObject::connect(button_replace, SIGNAL(clicked()), SLOT(replace()));
+    QObject::connect(button_replace_all, SIGNAL(clicked()), SLOT(replaceAll()));
 
     window->show();
 }
 
-Finder::~Finder() {
-    delete l;
-    delete window;
-}
-
-void Finder::findButtonClicked() {
+void Finder::find() {
     if (!area)
         return;
     
-    regex = QRegExp(edit->text());
+    regex = QRegExp(find_edit->text());
     int counter = 0;
+    matches = 0;
+    current_match = 0;
 
     area->moveCursor(QTextCursor::Start);
     while (area->find(regex))
@@ -58,20 +70,23 @@ void Finder::findButtonClicked() {
     if (counter > 0) {
         matches = counter;
         current_match = 1;
-        setText();
         button_replace->setEnabled(true);
         button_replace_all->setEnabled(true);
+        replace_edit->setEnabled(true);
 
         area->moveCursor(QTextCursor::Start);
         area->find(regex);
     }
+
+    setText();
+
     if (counter > 1) {
-        next->setEnabled(true);
-        prev->setEnabled(true);
+        button_next->setEnabled(true);
+        button_prev->setEnabled(true);
     }
 }
 
-void Finder::prevButtonClicked() {
+void Finder::prev() {
     if (current_match == 1)
         return;
 
@@ -84,11 +99,24 @@ void Finder::prevButtonClicked() {
     setText();
 }
 
-void Finder::nextButtonClicked() {
+void Finder::next() {
     if (current_match < matches && area->find(regex)) {
         ++current_match;
         setText();
     }
+}
+
+void Finder::replace() {
+    QTextCursor cursor = area->textCursor();
+
+    if (cursor.hasSelection())
+        cursor.insertText(replace_edit->text());
+}
+
+void Finder::replaceAll() {
+    area->moveCursor(QTextCursor::Start);
+    while (area->find(regex))
+        replace(); 
 }
 
 void Finder::setText() {
