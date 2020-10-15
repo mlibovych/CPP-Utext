@@ -60,6 +60,13 @@ void myTab::renameFile(QString oldPath, QString newPath) {
     }
 }
 
+void myTab::removeFile(QString filePath) {
+    if (tab_content.count(filePath)) {
+        emit tabCloseRequested(indexOf(tab_content[filePath]));
+        tab_content.erase(filePath);
+    }
+}
+
 void myTab::closeTab(int index)
 {
     tab_content.erase(tabText(index));

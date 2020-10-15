@@ -30,6 +30,7 @@ myTree::myTree(QWidget *parent) :
                         QTreeView(parent)
 {
     connect(this, SIGNAL(fileRenamed(QString, QString)), getMyTab(), SLOT(renameFile(QString, QString)));
+    connect(this, SIGNAL(fileRemoved(QString)), getMyTab(), SLOT(removeFile(QString)));
 }
 
 void myTree::mousePressEvent(QMouseEvent *event) {
@@ -53,7 +54,7 @@ void myTree::mousePressEvent(QMouseEvent *event) {
             QAction* deleteFile = new QAction(("Delete"), this);
 
             connect(renameFile, SIGNAL(triggered()), SLOT(slotRename()));
-            // connect(removeDevice, SIGNAL(triggered()), this, SLOT(slotRemove()));
+            connect(deleteFile, SIGNAL(triggered()), this, SLOT(slotRemove()));
             menu->addAction(renameFile);
             menu->addAction(deleteFile);
             if (info.isDir()) {
@@ -78,6 +79,14 @@ void myTree::slotRename() {
 
     if (QFile::rename(filePath, info.absolutePath() + "/" + newName)) {
         emit fileRenamed(filePath, info.absolutePath() + "/" + newName);
+    }
+}
+
+void myTree::slotRemove() {
+    QString filePath = dirmodel->filePath(currentIndex());
+
+    if (QFile::remove(filePath)) {
+        emit fileRemoved(filePath);
     }
 }
 

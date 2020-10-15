@@ -36,9 +36,11 @@ public:
 
 public slots:
     void slotRename();
+    void slotRemove();
 
 signals:
     void fileRenamed(QString oldPath, QString newPath);
+    void fileRemoved(QString filePath);
 };
 
 class myTreeScroll : public QWidget
