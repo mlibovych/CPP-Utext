@@ -8,7 +8,10 @@ ___
 
  [Yulia Bondarenko](https://github.com/kali-y23)
 
-​
+
+### Screenshot:
+ ![Examplw](./example.png)
+
 ### Tech/framework used
 ​
 #### 1.Built with
